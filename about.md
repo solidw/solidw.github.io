@@ -4,12 +4,17 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+### belong to
 
-### More Information
+[Chungnam National University](http://computer.cnu.ac.kr) in 2nd grade.
 
-A place to include any other types of information that you'd like to include about yourself.
+***
+### Me
 
+solidw, In Daegeon, Studing in club *ARGOS*
+
+***
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+solidw@naver.com
+
