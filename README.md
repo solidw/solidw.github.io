@@ -11,9 +11,9 @@
   - `feat` : When new features was added.
   - `fix` : When the bug was fixed.
   - `docs` : When the documents was changed.
-  - `style` : When the code's format was changed, missing semicolon(;).
+  - `style` : When the code's format was changed or missing semicolon(;).
   - `refactor` : When the code was refactored.
-  - `test` : When the test was added, test was refactored. (No change production code)
+  - `test` : When the test was added or test was refactored. (No change production code)
   - `chore` : When the build task was updated. (No change production code)
 - Example
   - `docs : Add foo.md`
