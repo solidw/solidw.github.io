@@ -14,8 +14,6 @@ comments: true
 
 KnockSackBag 이라는 문제로, 암호 분야(CRYPTO)의 200점 짜리! 😮
 
-<!--more-->
-
 ![](https://i.imgur.com/hlccGas.png)
 
 

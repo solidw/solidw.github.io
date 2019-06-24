@@ -14,8 +14,6 @@ comments: true
 
 Rock Paper Cesare!!_K 라는 문제이다. scissor를 cesare라고 표현한 것을 보아 caesar에 대한 힌트를 준 것 같다.
 
-<!--more-->
-
 ![](https://i.imgur.com/6lNE3PO.png)
 
 50점 짜리 문제이다.
@@ -99,7 +97,7 @@ RPC_Module.hi(count)
 
 ![](https://i.imgur.com/bZvo35j.png)
 
-ROCK만 5번 냈는데 2번 비기고 3번 졌다.... T.T
+(ROCK만 5번 냈는데 2번 비기고 3번 졌다.... T.T)
 
 
 

@@ -13,7 +13,6 @@ comments: true
 ***
 
 varCode_C라는 50점짜리 문제이다.
-<!--more-->
 ![varcode00](https://i.imgur.com/hiyz99I.png)
 
 
@@ -66,7 +65,7 @@ print res 할 경우
 
 	01001010010001100101001101111011011101100110000101110010011000110110111101100100011001010101111101001001011011000100100101101100010010010110110001111101
 
-다음과 같은 숫자들이 나오는데, 아스키코드로 문자 하나를 표현하기 적합한 8bit로 나누었을 때, 이 2진 숫자들을 10진수로 변환한 값을 다시 한 번 문자로 변환하면 적절한 Character가 나온다.
+다음과 같은 숫자들이 나오는데, 아스키코드로 영문자 하나를 표현하기 적합한 8bit로 나누었을 때, 이 이진 숫자들을 10진수로 변환한 값을 마지막으로 문자로 변환하면 적절한 Character가 나온다.
 
 ```python
 line = "IlIIlIlIIlIIIllIIlIlIIllIllllIllIlllIllIIllIIIIlIlllIIlIIllIIIllIllIllllIllIIlIIIllIIlIlIlIlllllIlIIlIIlIllIllIIIlIIlIIlIllIllIIIlIIlIIlIllIllIIIlllllIl"
@@ -91,7 +90,7 @@ print "FLAG is :", toprint
 
 
 
-`chr(int(i,2))` 를 통해 2진숫자를 10진수형태로 바꾼 후 char 형태로 다시 변환하는 모습을 볼 수 있다.
+`chr(int(i,2))` 를 통해 이진수를 10진수 형태로 바꾼 후 char 형태로 다시 변환하는 모습을 볼 수 있다.
 
 
 

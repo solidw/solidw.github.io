@@ -14,8 +14,6 @@ comments: true
 
 Flaggyy Bird라는 문제. 250점짜리 !!!!
 
-<!--more-->
-
 ![](https://i.imgur.com/xtrwF1U.png)
 
 시간이 좀 걸렸다.

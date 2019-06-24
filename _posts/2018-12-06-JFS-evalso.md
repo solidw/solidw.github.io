@@ -11,14 +11,13 @@ comments: true
 
 ***
 
-evalso 라는 100점짜리 문제.
-<!--more-->
+
 
 ![evalso](https://i.imgur.com/80zwpPS.png)
 
+evalso 라는 100점짜리 문제.
 
-
-눌러보면 다음과 같다.
+문제는 다음과 같다.
 
 ![](https://i.imgur.com/hALQ6el.png)
 
@@ -26,9 +25,9 @@ evalso 라는 100점짜리 문제.
 
 ![](https://i.imgur.com/EnCtCdE.png)
 
->동아리 내부망에서만 접근 가능한 IP다.
+>내부망에서만 접근 가능한 IP다.
 
-다음과 같이 nc 했을 때, 수식이 나오고 답을 입력하면 다음 단계로 넘어가는 듯 하다.
+다음과 같이 nc 했을 때, 수식이 나오고 답을 입력하면 다음 단계로 진행된다.
 
 ![](https://i.imgur.com/GAlNpRB.png)
 
@@ -40,11 +39,11 @@ evalso 라는 100점짜리 문제.
 
 ` __import__('subpro'+'cess').call(['/bin/sh', '-s'])`
 
-Python에서 'subprocess'를 우회하여 쉘을 실행시키는 쉘코드이다.
+Python에서 'subprocess'를 우회하여 '/bin/sh' 즉 쉘을 실행시키는 쉘코드이다.
 
-그런 후 ls를 했더니
+실행된 쉘에서 ls를 실행했더니
 
-`evalso.py` 라는 파일이 달랑 하나 있기에
+`evalso.py` 라는 파일이 달랑 하나 있었다.
 
 `cat evalso.py` 를 입력하니 (5초안에 해야한다.) 플래그가 보였다. !
 
@@ -81,4 +80,4 @@ print p.recvline()
 
 
 
-다음과 같은 python 코드를 실행하면 문제가 풀린다 !
+다음과 같은 python 코드를 실행하면 플래그가 나온다.
