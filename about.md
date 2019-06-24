@@ -6,7 +6,7 @@ permalink: /about/
 
 ### belong to
 
-[Chungnam National University](http://computer.cnu.ac.kr) in 2nd grade.
+junior in [Chungnam National University](http://computer.cnu.ac.kr).
 
 ***
 ### Me
