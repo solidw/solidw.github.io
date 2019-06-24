@@ -2,7 +2,6 @@
 layout: post
 title: "[JFS] evalso"
 subtitle: "이발소"
-categories: writeup
 tags: jfs
 comments: true
 ---
@@ -12,26 +11,26 @@ comments: true
 
 ***
 
-evalso(이발소...) 라는 100점짜리 문제.
+evalso 라는 100점짜리 문제.
 <!--more-->
 
-![evalso]({{site.baseurl}}/images/2018-12-06-JFS-evalso/00.PNG)
+![evalso](https://i.imgur.com/80zwpPS.png)
 
 
 
 눌러보면 다음과 같다.
 
-![]({{site.baseurl}}/images/2018-12-06-JFS-evalso/01.PNG)
+![](https://i.imgur.com/hALQ6el.png)
 
 5초안에 문제를 풀어라(?)
 
-![]({{site.baseurl}}/images/2018-12-06-JFS-evalso/02.PNG)
+![](https://i.imgur.com/EnCtCdE.png)
 
 >동아리 내부망에서만 접근 가능한 IP다.
 
 다음과 같이 nc 했을 때, 수식이 나오고 답을 입력하면 다음 단계로 넘어가는 듯 하다.
 
-![]({{site.baseurl}}/images/2018-12-06-JFS-evalso/03.PNG)
+![](https://i.imgur.com/GAlNpRB.png)
 
 수식을 풀면 되는 줄 알고 python의 pwntools를 이용하여 해보려 했지만... 
 
