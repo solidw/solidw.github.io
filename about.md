@@ -4,9 +4,9 @@ title: About
 permalink: /about/
 ---
 
-### belong to
+### Belong to
 
-junior in [Chungnam National University](http://computer.cnu.ac.kr).
+Junior in [Chungnam National University](http://computer.cnu.ac.kr).
 
 ***
 ### Me
