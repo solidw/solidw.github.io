@@ -2,7 +2,7 @@
 #  User configuration
 # -----------------------------------------------------------------------------
 
-title:               Solidw BLOG
+title:               Solidw
 
 # The unique resource location of your page.
 # Set to `https://<username>.github.io` when hosting on GitHub Pages
@@ -13,12 +13,12 @@ url:                 https://solidw.github.io
 baseurl:             ""
 
 # A very short description of your page
-tagline:             컴퓨터공학도
+tagline:             컴퓨터 공학도
 
 # A short description of the page, used in the sidebar and as fallback for the meta description tag.
 # Markdown enabled, but don't use more than one paragraph (enforced by `>`)
 description:         >
-  개발, 정보보안
+  개발, 정보 보안
 
 # This should be the same author as first entry in `_data/authors.yml`
 author:
@@ -50,7 +50,7 @@ google_fonts:        Lato
 disqus_shortname:    solidw
 
 # This text will appear in the footer of every page. Markdown enabled.
-copyright:           '© 2019. All rights reserved.'
+copyright:           '&copy; 2017. by isme2n'
 
 # Format of the permalinks
 permalink:           pretty

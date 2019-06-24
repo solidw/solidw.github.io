@@ -1,64 +1,67 @@
-// # src / katex.js
-// Copyright (c) 2018 Florian Klampfer <https://qwtel.com/>
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+// Copyright (c) 2017 Florian Klampfer
+// Licensed under MIT
 
-import "core-js/fn/array/for-each";
+/* eslint-disable no-param-reassign */
 
-import { hasFeatures, hide } from "./common";
+import katex from 'katex';
 
-const REQUIREMENTS = ["classlist", "eventlistener", "queryselector"];
+import { hasFeatures, hide, matches } from './common';
 
-const featuresOk = hasFeatures(REQUIREMENTS);
-let loaded;
+const REQUIREMENTS = [
+  'eventlistener',
+  'queryselector',
+];
 
-function renderKatex(el) {
+function willChangeContent(mathBlocks) {
+  Array.prototype.forEach.call(mathBlocks, (el) => {
+    el.style.willChange = 'content'; // eslint-disable-line no-param-reassign
+  });
+}
+
+function replaceMathBlock(el, tex) {
+  el.outerHTML = katex.renderToString(tex, {
+    displayMode: el.type === 'math/tex; mode=display',
+  });
+}
+
+function renderKatex(el, tex) {
   try {
-    let prev = el.previousElementSibling;
-    while (prev && !prev.classList.contains("MathJax_Preview")) prev = prev.previousElementSibling;
-
-    const tex = el.textContent.replace("% <![CDATA[", "").replace("%]]>", "");
-
-    el.outerHTML = window.katex.renderToString(tex, {
-      displayMode: el.type === "math/tex; mode=display",
-    });
-
-    if (prev) prev.parentNode.removeChild(prev);
+    const prev = el.previousElementSibling;
+    replaceMathBlock(el, tex);
+    if (prev && matches(prev, '.MathJax_Preview')) hide(prev);
   } catch (e) {
-    if (process.env.DEBUG) console.error(e);
+    // TODO: remove in production builds?
+    console.error(e); // eslint-disable-line no-console
+  } finally {
+    el.style.willChange = '';
   }
 }
 
-const promisify = (f, href) => new Promise(resolve => f(href).addEventListener("load", resolve));
+function readTexSource(el) {
+  return el.textContent.replace('% <![CDATA[', '').replace('%]]>', '');
+}
 
-export const upgradeMathBlocks = !featuresOk
-  ? () => {}
-  : () => {
-      const mathBlocks = document.querySelectorAll('script[type^="math/tex"]');
-      if (mathBlocks.length) {
-        if (!loaded) {
-          loaded = Promise.all([
-            promisify(loadJS, document.getElementById("_hrefKatexJS").href),
-            promisify(loadCSS, document.getElementById("_hrefKatexCSS").href),
-            promisify(loadJS, document.getElementById("_hrefKatexCopyJS").href),
-            promisify(loadCSS, document.getElementById("_hrefKatexCopyCSS").href),
-          ]);
-        }
-        loaded.then(() => {
-          Array.from(mathBlocks).forEach(renderKatex);
-        });
-      }
-    };
+function changeContent(mathBlocks) {
+  // kramdown generates script tags with type "math/tex"
+  Array.prototype.forEach.call(mathBlocks, (script) => {
+    const tex = readTexSource(script);
+    renderKatex(script, tex);
+  });
+}
 
-upgradeMathBlocks();
+export default function upgradeMathBlocks() {
+  if (hasFeatures(REQUIREMENTS)) {
+    const mathBlocks = document.querySelectorAll('script[type^="math/tex"]');
+    if (mathBlocks.length) {
+      willChangeContent(mathBlocks);
+      changeContent(mathBlocks);
+    }
+  }
+}
+
+if (hasFeatures(REQUIREMENTS)) {
+  // TODO: load on demand?
+  const ref = document.getElementsByTagName('style')[0];
+  const style = loadCSS('https://unpkg.com/katex@0.7.1/dist/katex.min.css', ref);
+  style.addEventListener('load', upgradeMathBlocks);
+}
