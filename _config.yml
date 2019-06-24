@@ -18,7 +18,7 @@ tagline:             컴퓨터 공학도
 # A short description of the page, used in the sidebar and as fallback for the meta description tag.
 # Markdown enabled, but don't use more than one paragraph (enforced by `>`)
 description:         >
-  개발, 정보 보안
+          개발, 정보 보안
 
 # This should be the same author as first entry in `_data/authors.yml`
 author:
@@ -27,7 +27,7 @@ author:
 
 # Fallback image and color
 image:               /assets/img/sidebar-bg.jpg
-color:               '#4f86aa'
+# color:               '#4f86aa'
 
 # The font used for headings. Expects a string that is a valid CSS font-family value.
 font_heading:        "'Lato', 'Sans-serif'"
