@@ -6,15 +6,15 @@
 
 ### Commit Style : refer to [Udacity Commit Guide](https://udacity.github.io/git-styleguide/) 
 
-- Form of commit : `label : (verb) (title)`  no dot.
+- Form of commit : `label : (verb) (title)` 
 - Type of `label` 
-  - `feat` : When new features was added.
-  - `fix` : When the bug was fixed.
-  - `docs` : When the documents was changed.
-  - `style` : When the code's format was changed or missing semicolon(;).
-  - `refactor` : When the code was refactored.
-  - `test` : When the test was added or test was refactored. (No change production code)
-  - `chore` : When the build task was updated. (No change production code)
+	- `feat` : a new feature
+	- `fix` : a bug fix
+	- `docs` : changes to documentation
+	- `style` : formatting, missing semi colons, etc; no code change
+	- `refactor` : refactoring production code
+	- `test` : adding tests, refactoring test; no production code change
+	- `chore` : updating build tasks, package manager configs, etc; no production code change
 - Example
   - `docs : Add foo.md`
   - `docs : Change README.md that somebody can read this`
