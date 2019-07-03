@@ -72,18 +72,14 @@ comments: true
   - flex-flow : flex-direction + flex-wrap
 
     - ex) 
+- #pond {
+	        display : flex; 
+          flex-flow : column wrap;
+        }
 
-	- ```javascript
-    #pond {
 
-      display : flex;
 
-      flex-flow : column wrap;
-
-    }
-    ```
-
-> 추가) 공식 문서
+> 추가) React 공식 문서
 
 본격적인 개발에 앞서 [공식 문서](https://reactjs-kr.firebaseapp.com/tutorial/tutorial.html)를 한번 따라해봤다.
 
@@ -222,3 +218,7 @@ function calculateWinner(squares) {
 ```
 </div>
 </details>
+
+   ```
+
+   ```
