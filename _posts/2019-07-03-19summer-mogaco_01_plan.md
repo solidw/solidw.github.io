@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[19년도 하계 모각코] 1회차 계획"
+title: "[19년도 하계 모각코] 1회차_계획"
 categories: mogaco
 tags: 19summer
 comments: true

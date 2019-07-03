@@ -26,7 +26,7 @@ comments: true
 
 > 간단한 SPA ( Single Page Application )
 
-- flex CSS 복습하기
+- [flex CSS 복습하기](https://flexboxfroggy.com/#ko)
 
   - justify-content : flex 요소들을 가로선을 기준으로 정렬
 
