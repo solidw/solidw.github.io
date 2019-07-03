@@ -72,10 +72,10 @@ comments: true
   - flex-flow : flex-direction + flex-wrap
 
     - ex) 
-- #pond {
-	        display : flex; 
-          flex-flow : column wrap;
-        }
+    - #pond {
+    	        display : flex; 
+              flex-flow : column wrap;
+            }
 
 
 
@@ -218,7 +218,3 @@ function calculateWinner(squares) {
 ```
 </div>
 </details>
-
-   ```
-
-   ```
