@@ -36,7 +36,7 @@ React를 이용해 Tic Tac Toe (삼목) 게임 페이지를 만드는 것인데,
 <summary>접기/펼치기 버튼</summary>
 <div markdown="1">
 
-```javascript
+```react
 function Square(props) {
   return (
     <button className="square" onClick={props.onClick}>
