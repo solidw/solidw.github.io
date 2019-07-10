@@ -8,7 +8,7 @@ comments: true
 
 # 계획
 - Udemy의 [MOOC강의](https://www.udemy.com/react-redux-korean/) 수강
-  - Section 2 : 리액티와 비동기 리퀘스트(Ajax Requests)
+  - Section 1 : 리액트 소개(Ajax Requests)
 - 영어 공부
   - Topic 하나에 대해  글쓰기 (uphone.co.kr)
 
