@@ -7,7 +7,7 @@ comments: true
 ---
 
 # 계획
-- 진행하고 있는 React Native 프로젝트의 Auth Tab을 모두 완성하기
+- 진행하고 있는 React Native 프로젝트의 Auth Tab을 완성하기
   - Sign In
   - Sign Up
   - Firebase 연동
