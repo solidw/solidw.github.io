@@ -11,8 +11,16 @@ order: 4
 
 ## 약력
 
-- 대전·충청 모임 대충모임 운영진 '19
+- 정보보안 동아리 ARGOS 회장 '20
 
 - 정보보안 동아리 ARGOS 부회장 '19
 
+- 대전·충청 모임 대충모임 운영진 '19 ~
+
 - 충남대학교 컴퓨터공학과 재학 '17 ~
+
+### 글로벌SW인재트랙 BeeoT
+
+19.12.30 - 20.02.27 Indiana State의 Purdue University에서 2개월간 연수
+
+[Beeot](https://beeot.github.io)
