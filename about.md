@@ -24,3 +24,11 @@ order: 4
 19.12.30 - 20.02.27 Indiana State의 Purdue University에서 2개월간 연수
 
 [Beeot](https://beeot.github.io)
+
+### Open Source Contribute
+
+Facebook - Jest : Javascript Testing framework
+
+기여 내용 - 오래된 React Jest example 수정 - ref 사용
+
+[https://github.com/facebook/jest/pull/9300](https://github.com/facebook/jest/pull/9300)
