@@ -29,6 +29,6 @@ order: 4
 
 Facebook - Jest : Javascript Testing framework
 
-기여 내용 - 오래된 React Jest example 수정 - ref 사용
+기여 내용 - 오래된 React Jest example에서 Typescript에 대한 example를 수정 - ref 사용
 
 [https://github.com/facebook/jest/pull/9300](https://github.com/facebook/jest/pull/9300)
