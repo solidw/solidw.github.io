@@ -1,43 +1,43 @@
+--- # -----------------------------------------------------------------------------
+
 # -----------------------------------------------------------------------------
 #  User configuration
-# -----------------------------------------------------------------------------
-
-title:               Solidw
+title: solidw
 
 # The unique resource location of your page.
 # Set to `https://<username>.github.io` when hosting on GitHub Pages
-url:                 https://solidw.github.io
+url: https://solidw.github.io
 
 # Set to '' when hosting a blog on GitHub Pages, ie on `//<username>.github.io`
 # Set to '/<reponame>' when using the `gh-pages` branch of a repository
-baseurl:             ""
+baseurl: ""
 
 # A very short description of your page
-tagline:             컴퓨터 공학도
+tagline: 컴퓨터 공학도
 
 # A short description of the page, used in the sidebar and as fallback for the meta description tag.
 # Markdown enabled, but don't use more than one paragraph (enforced by `>`)
-description:         >
-          개발, 정보 보안
+description: >
+  정보 보안, Javascript
 
 # This should be the same author as first entry in `_data/authors.yml`
 author:
-  name:              Taewan Go
-  email:             solidw@naver.com
+  name: Taewan Go
+  email: solidw@naver.com
 
 # Fallback image and color
-image:               /assets/img/sidebar-bg.jpg
-color:               '#4f86aa'
+image: /assets/img/sidebar-bg.jpg
+color: "#4f86aa"
 
 # The font used for headings. Expects a string that is a valid CSS font-family value.
-font_heading:        "'Lato', 'Sans-serif'"
+font_heading: "'Lato', 'Sans-serif'"
 
 # The text font. Expects a string that is a valid CSS font-family value.
-font:                "'Lato', 'Sans-serif'"
+font: "'Lato', 'Sans-serif'"
 
 # The string encoding what fonts to fetch from Google Fonts.
 # See: https://qwtel.com/hydejack/docs/configuration/
-google_fonts:        Lato
+google_fonts: Lato
 
 # If you do not use a Google Fonts, uncomment the line below
 # no_google_fonts:     true
@@ -47,17 +47,17 @@ google_fonts:        Lato
 # google_analytics:    UA-92346434-1
 
 # Setting a disqus shortname will enable the comment section on pages with `comments: true` in the front matter
-disqus_shortname:    solidw
+disqus_shortname: solidw
 
 # This text will appear in the footer of every page. Markdown enabled.
-copyright:           '&copy; 2019. by solidw'
+copyright: "&copy; 2019. by solidw"
 
 # Format of the permalinks
-permalink:           pretty
+permalink: pretty
 
 # Pagination configuration (used by the `blog` layout)
-paginate:            8
-paginate_path:       '/page-:num/'
+paginate: 8
+paginate_path: "/page-:num/"
 
 # If you are upgrading form a v5 verison of Hydejack, uncomment the two lines below,
 # so that the location of the feed XML stays the same.
@@ -83,14 +83,14 @@ paginate_path:       '/page-:num/'
 
 collections:
   featured_categories:
-    permalink:       /category/:name/
-    output:          true
+    permalink: /category/:name/
+    output: true
   featured_tags:
-    permalink:       /tag/:name/
-    output:          true
+    permalink: /tag/:name/
+    output: true
   projects:
-    permalink:       /projects/:path/
-    output:          true
+    permalink: /projects/:path/
+    output: true
 
 # -----------------------------------------------------------------------------
 #  Advanced configuration
@@ -112,18 +112,18 @@ exclude:
   - Gemfile.lock
 
 kramdown:
-  footnote_backlink: '&#x21a9;&#xfe0e;'
-  math_engine:       mathjax
+  footnote_backlink: "&#x21a9;&#xfe0e;"
+  math_engine: mathjax
   math_engine_opts:
-    preview:         true
+    preview: true
     preview_as_code: true
 
 compress_html:
-  comments:          ["<!-- ", " -->"]
-  clippings:         all
-  endings:           all
+  comments: ["<!-- ", " -->"]
+  clippings: all
+  endings: all
   ignore:
-    envs:            [development]
+    envs: [development]
 
 sass:
-  style:             compressed
+  style: compressed

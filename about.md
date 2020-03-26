@@ -5,30 +5,45 @@ menu: true
 order: 4
 ---
 
+> 2020-03-26 Update !
+
+
+
 ## 소개
 
-충남대학교 컴퓨터공학과 3학년에 재학중이며 현재는 React를 공부하고 있다.
+충남대학교 컴퓨터공학과에 재학중이며 주요 관심 분야는 정보보안 / 웹(Javascript) 이다.
+
+
 
 ## 약력
 
-- 정보보안 동아리 ARGOS 회장 '20
+- 충남대학교 정보보안 동아리 ARGOS 회장 '20
 
-- 정보보안 동아리 ARGOS 부회장 '19
+- 충남대학교 정보보안 동아리 ARGOS 부회장 '19
 
-- 대전·충청 모임 대충모임 운영진 '19 ~
+- 대전·충청 정보보안 동아리 연합 [대충연합] 운영진 '19 ~
 
 - 충남대학교 컴퓨터공학과 재학 '17 ~
 
+
+
 ### 글로벌SW인재트랙 BeeoT
 
-19.12.30 - 20.02.27 Indiana State의 Purdue University에서 2개월간 연수
+19.12.30 - 20.02.27 Purdue University, Indiana에서 2개월간 연수
 
-[Beeot](https://beeot.github.io)
+###### What I learned :
+
+- Image Processing
+- 3D Printing
+- Bee
+
+- Project Link : [Beeot](https://beeot.github.io)
+
+
 
 ### Open Source Contribute
 
-Facebook - Jest : Javascript Testing framework
+- Facebook - Jest : Javascript Testing framework (Feb 14, 2020)
+  - 기여 내용 - 오래된 React Jest example에서 Typescript에 대한 example를 수정 - ref 사용 ()
 
-기여 내용 - 오래된 React Jest example에서 Typescript에 대한 example를 수정 - ref 사용
-
-[https://github.com/facebook/jest/pull/9300](https://github.com/facebook/jest/pull/9300)
+  - [https://github.com/facebook/jest/pull/9300](https://github.com/facebook/jest/pull/9300)
