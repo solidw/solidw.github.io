@@ -149,6 +149,7 @@
   word-wrap: normal;
   background-color: transparent;
   border: 0;
+  white-space:pre-wrap;
 }
 
 .markdown-body pre code:before,
