@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received type undefined"
+title: "TypeError [ERR_INVALID_ARG_TYPE]: The \"path\" argument must be of type string. Received type undefined"
 categories: devlog
 tags: react-scripts^3.4.0
 comments: true
