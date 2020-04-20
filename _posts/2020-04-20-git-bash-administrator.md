@@ -64,3 +64,7 @@ Menu bar에서 `git bash`를 입력하면 기존의 아이콘과 다른 일반 �
 ![1587369831039](C:\Users\solidw\AppData\Roaming\Typora\typora-user-images\1587369831039.png)
 
 >  우클릭으로 실행, 관리자 권한은 필요할 때만 실행하는 것이 합리적이라고 생각한다.
+
+
+
+> 근데 이럴거면 굳이 git-bash 안써고 필요할 때만 잠깐 PowerShell을 관리자 권한으로 실행해도 될 것 같다 .... ㅎ ㅎ
