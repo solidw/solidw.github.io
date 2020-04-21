@@ -23,7 +23,7 @@ comments: true
 
 Menu bar에서 `git bash`를 입력하면 기존의 아이콘과 다른 일반 실행프로그램이 나온다.
 
-![1587369325209](C:\Users\solidw\AppData\Roaming\Typora\typora-user-images\1587369325209.png)
+![1587369325209](https://i.imgur.com/g3CZxL3.png)
 
 우클릭해서 `파일 위치 열기`를 누를 경우에 해당 디렉토리로 이동한다.
 
