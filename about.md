@@ -5,15 +5,9 @@ menu: true
 order: 4
 ---
 
-> 2020-03-26 Update !
-
-
-
 ## 소개
 
 충남대학교 컴퓨터공학과에 재학중이며 주요 관심 분야는 정보보안 / 웹(Javascript) 이다.
-
-
 
 ## 약력
 
@@ -24,8 +18,6 @@ order: 4
 - 대전·충청 정보보안 동아리 연합 [대충연합] 운영진 '19 ~
 
 - 충남대학교 컴퓨터공학과 재학 '17 ~
-
-
 
 ### 글로벌SW인재트랙 BeeoT
 
@@ -39,11 +31,17 @@ order: 4
 
 - Project Link : [Beeot](https://beeot.github.io)
 
-
-
 ### Open Source Contribute
 
-- Facebook - Jest : Javascript Testing framework (Feb 14, 2020)
+- Facebook - Jest: Javascript Testing framework (Feb 14, 2020)
+
   - 기여 내용 - 오래된 React Jest example에서 Typescript에 대한 example를 수정 - ref 사용 ()
 
   - [https://github.com/facebook/jest/pull/9300](https://github.com/facebook/jest/pull/9300)
+
+- GraphQL - graphql-js: a query language for APIs created by Facebook.
+
+  - 기여 내용 - 6월 10일 Update된 graphql-express 모듈에서, export default 였던 graphqlHTTP가 export 로 바뀌었다.
+  - 이를 반영하여 graphql-js docs를 업데이트했다.
+
+  - [https://github.com/graphql/graphql-js/pull/2693](https://github.com/graphql/graphql-js/pull/2693)
