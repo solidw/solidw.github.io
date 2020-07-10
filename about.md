@@ -33,15 +33,16 @@ order: 4
 
 ### Open Source Contribute
 
-- Facebook - Jest: Javascript Testing framework (Feb 14, 2020)
+- Facebook - Jest: Javascript Testing framework
 
-  - 기여 내용 - 오래된 React Jest example에서 Typescript에 대한 example를 수정 - ref 사용 ()
+  - 기여 내용 - 오래된 React Jest example에서 Typescript에 대한 example를 수정
+  - Deprecated된 findDomNode() 대신 ref 사용 (Feb 14, 2020)
 
   - [https://github.com/facebook/jest/pull/9300](https://github.com/facebook/jest/pull/9300)
 
 - GraphQL - graphql-js: a query language for APIs created by Facebook.
 
-  - 기여 내용 - 6월 10일 Update된 graphql-express 모듈에서, export default 였던 graphqlHTTP가 export 로 바뀌었다.
-  - 이를 반영하여 graphql-js docs를 업데이트했다.
+  - 기여 내용 - 6월 10일 Update된 graphql-express 모듈에서, export default 였던 graphqlHTTP가 export 로 바뀌었지만 graphql-js 공식 도큐먼트에서는 반영이 되지 않았다.
+  - 이를 반영하여 graphql-js docs를 업데이트했다. (Jul 8, 2020)
 
   - [https://github.com/graphql/graphql-js/pull/2693](https://github.com/graphql/graphql-js/pull/2693)
