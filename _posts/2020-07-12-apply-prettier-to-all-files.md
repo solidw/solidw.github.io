@@ -27,3 +27,41 @@ comments: true
 50개 정도 되는 파일이 한번에 수정되어 깃에 통째로 올려버렸다.
 
 ![prettier](https://i.imgur.com/4wFwYo4.png)
+
+참고로 내가 사용한 prettier 설정 파일은 다음과 같다. [airbnb/javascript](github.com/airbnb/javascript) 를 참고한 설정)
+
+`.prettierrc` 프로젝트의 root 디렉토리에 `.prettierrc` 파일을 생성하고 아래와 같이 입력하면 된다.
+
+```json
+{
+  "printWidth": 80,
+  "tabWidth": 2,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "semi": true,
+  "useTabs": true,
+  "jsxSingleQuote": true,
+  "arrowParens": "always",
+  "bracketSpacing": true
+}
+```
+
+만약 .js 파일로 적용하고 싶다면
+
+`.prettierrc.js` 에
+
+```javascript
+module.export = {
+  printWidth: 80,
+  tabWidth: 2,
+  singleQuote: true,
+  trailingComma: "all",
+  semi: true,
+  useTabs: true,
+  jsxSingleQuote: true,
+  arrowParens: "always",
+  bracketSpacing: true,
+};
+```
+
+이렇게 입력하면 된다!
