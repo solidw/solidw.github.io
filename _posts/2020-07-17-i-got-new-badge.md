@@ -21,6 +21,6 @@ Github가 새 기능을 하나 둘 씩 만들더니 이번엔 오픈소스에 �
 ![open sources](https://github.com/solidw/solidw.github.io/blob/master/_posts/images/2020-github-archive-program.JPG?raw=true)
 
 
-나는 이 오픈소스들 중 `graphql-js`에 기여했는데 아주 간단한 문서 수정이었다.
+나는 이 오픈소스들 중 `graphql-js`에 기여했는데, 간단한 문서의 수정이었다. [여기서 볼 수 있다.](https://github.com/graphql/graphql-js/pull/2693)
 
 생각보다 피드백도 빠르고, 생각보다 수정할 것이 곳곳에 숨어있으니 다들 기여하여 `Arctic Code Vault Contributor`가 되어보는건 어떨까!?
