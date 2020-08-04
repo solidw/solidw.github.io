@@ -72,7 +72,9 @@ CSS에는 position이라는 attribute가 있다.
 }
 ```
 결과
+
 ![before](https://github.com/solidw/solidw.github.io/blob/master/_posts/images/before.JPG?raw=true)
 
 transform 주석 해제 후 결과
+
 ![after](https://github.com/solidw/solidw.github.io/blob/master/_posts/images/after.JPG?raw=true)
