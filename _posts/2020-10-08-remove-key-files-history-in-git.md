@@ -75,3 +75,5 @@ git push --force
 
 ## 결론
 git을 사용할 때마다 느끼지만, 꼬일 때마다 식은땀이 난다.
+
+\+ rewrite 한 commit이 repo에서는 정상적으로 기록이 되는 반면에 github Overview의 잔디에는 기록이 중복으로 남았다. 이 문제는 어떻게 해결할지 모르겠다. --force의 여파인가..
