@@ -46,7 +46,7 @@ git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch path_to_f
 
 역시 언제나 그렇듯 이런 경험을 나만 한 것은 아니었다. `git filter-branch`를 undo 하고 싶은 사람의 [질문](https://stackoverflow.com/questions/14542326/undo-git-filter-branch)에, 이런 답변이 있었다.
 
-![undo-git-filter-branch](https://github.com/solidw/solidw.github.io/blob/master/_posts/images/undo-git-filter-branch.JPG)
+![undo-git-filter-branch](https://raw.githubusercontent.com/solidw/solidw.github.io/master/_posts/images/undo-git-filter-branch.JPG)
 
 내가 `git filter-branch` 명령어를 사용할 때 git은 알아서 rewrite 전의 히스토리들로 backup을 만들어 보관한다. (이때, filter-branch의 backup은 하나만 존재하는 것 같다. 만약 이미 있다면 -f 옵션을 넣어주자.)
 
