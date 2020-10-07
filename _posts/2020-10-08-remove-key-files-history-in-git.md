@@ -28,7 +28,7 @@ git에서는 다른 사람과 공유하면 안 되는 파일(`google-services.js
 git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch path_to_file" HEAD
 ```
 
-> 위와 같은 명령어를 사용하면, history에 쌓여 있는 모든 commit을 방문하면서 `path_to_file`을 삭제한다. 나 같은 경우에는 firebase messaging에 사용한 `./android/app/google-services.json`을 삭제했다. [출처](https://myopswork.com/how-remove-files-completely-from-git-repository-history-47ed3e0c4c35)
+> 위와 같은 명령어를 사용하면, history에 쌓여 있는 모든 commit을 방문하면서 `path_to_file`을 삭제한다. 나의 경우에는 firebase를 위해 사용한 `./android/app/google-services.json`의 기록을 삭제했다. [출처](https://myopswork.com/how-remove-files-completely-from-git-repository-history-47ed3e0c4c35)
 
 나의 경우에는 약 260개의 commit이 있어 3분 정도 시간이 걸렸으나, 혹자는 90k commit을 수정하는 데 무려 10시간이 걸렸다고 한다.
 
