@@ -6,8 +6,8 @@
 		"build": "next build",
 		"start": "next start",
 		"type-check": "tsc",
-		"lint": "eslint './src/**/*.{ts,tsx,js,jsx}'",
-		"lint:fix": "eslint --fix './src/**/*.{ts,tsx,js,jsx}'"
+		"lint": "eslint ./src --ext .jsx,.js,.tsx,.ts --cache --ignore-pattern .gitignore",
+		"lint:fix": "eslint --fix ./src --ext .jsx,.js,.tsx,.ts --cache --ignore-pattern .gitignore"
 	},
 	"dependencies": {
 		"@material-ui/core": "^4.11.0",
