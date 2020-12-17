@@ -7,7 +7,7 @@ order: 4
 
 ## 소개
 
-충남대학교 컴퓨터공학과에 재학중이며 주요 관심 분야는 정보보안 / 웹(Javascript) 이다.
+충남대학교 컴퓨터공학과에 재학하고 있으며 주요 관심 분야는 JavaScript와 그 생태계 그리고 정보보안입니다.
 
 ## 약력
 
@@ -33,7 +33,7 @@ order: 4
 
 ### Open Source Contribute
 
-- Facebook - Jest: Javascript Testing framework
+- Facebook - Jest: JavaScript Testing framework
 
   - 기여 내용 - 오래된 React Jest example에서 Typescript에 대한 example를 수정
   - Deprecated된 findDomNode() 대신 ref 사용 (Feb 14, 2020)
@@ -42,7 +42,7 @@ order: 4
 
 - GraphQL - graphql-js: a query language for APIs created by Facebook.
 
-  - 기여 내용 - 6월 10일 Update된 graphql-express 모듈에서, export default 였던 graphqlHTTP가 export 로 바뀌었지만 graphql-js 공식 도큐먼트에서는 반영이 되지 않았다.
-  - 이를 반영하여 graphql-js docs를 업데이트했다. (Jul 8, 2020)
+  - 기여 내용 - 6월 10일 Update된 graphql-express 모듈에서, export default 였던 `graphqlHTTP`가 default export에서 export로 바뀌었지만 graphql-js 공식 도큐먼트에서는 반영되지 않음.
+  - 이를 반영하여 graphql-js docs를 업데이트. (Jul 8, 2020)
 
   - [https://github.com/graphql/graphql-js/pull/2693](https://github.com/graphql/graphql-js/pull/2693)
