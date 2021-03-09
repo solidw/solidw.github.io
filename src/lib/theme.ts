@@ -1,24 +1,36 @@
-import { createMuiTheme, ThemeOptions } from '@material-ui/core/styles';
-
-const GMARGET_SANS_LIGHT = 'GmarketSansLight';
-const GMARGET_SANS_MEDIUM = 'GmarketSansMedium';
+import { createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
   typography: {
-    fontFamily: [GMARGET_SANS_MEDIUM, GMARGET_SANS_LIGHT].join(','),
+    fontFamily: [
+      'Spoqa Han Sans',
+      'Apple SD Gothic Neo',
+      'Nanum Barun Gothic',
+      'Nanum Gothic',
+      '돋움',
+      'Dotum',
+      'Verdana',
+      'Arial',
+      'sans-serif',
+    ].join(','),
     button: {
       textTransform: 'none',
     },
   },
   palette: {
     primary: {
-      main: '#007ACC',
+      main: '#c5cae9',
     },
     secondary: {
-      main: '#000000',
+      main: '#BE9FE1',
     },
-    background: {
-      default: '#fff',
+    contrastThreshold: 3,
+  },
+  overrides: {
+    MuiTypography: {
+      root: {
+        whiteSpace: 'pre-wrap',
+      },
     },
   },
 });
