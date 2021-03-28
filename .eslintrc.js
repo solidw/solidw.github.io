@@ -12,18 +12,8 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['@typescript-eslint', 'react', 'prettier'],
-  extends: [
-    'airbnb',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react/recommended',
-    'plugin:import/errors',
-    'plugin:import/warnings',
-    'plugin:import/typescript',
-    'prettier',
-    'prettier/@typescript-eslint',
-    'prettier/react',
-  ],
+  plugins: ['@typescript-eslint', 'react'],
+  extends: ['airbnb', 'plugin:@typescript-eslint/recommended', 'plugin:react/recommended', 'plugin:import/errors', 'plugin:import/warnings', 'plugin:import/typescript'],
   rules: {
     '@typescript-eslint/explicit-module-boundary-types': 0,
     'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }],
@@ -36,7 +26,6 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'import/extensions': 0,
     'import/prefer-default-export': 0,
-    'prettier/prettier': 'error',
     'no-use-before-define': 0,
   },
   settings: {
