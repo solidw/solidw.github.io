@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app';
-import '../styles/cssReset.css';
+import '#/styles/cssReset.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
