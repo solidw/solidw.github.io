@@ -18,7 +18,7 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 0,
     'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }],
     'react/prop-types': 0,
-    'react/jsx-props-no-spreading': ['error', { custom: 'ignore' }],
+    'react/jsx-props-no-spreading': 0,
     'react/no-unescaped-entities': 0,
     'react/require-default-props': 0,
     'jsx-a11y/accessible-emoji': 0,
@@ -27,6 +27,12 @@ module.exports = {
     'import/extensions': 0,
     'import/prefer-default-export': 0,
     'no-use-before-define': 0,
+    indent: 0,
+    '@typescript-eslint/indent': [
+      'error',
+      2,
+    ],
+
   },
   settings: {
     'import/resolver': {
