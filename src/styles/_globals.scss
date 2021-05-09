@@ -1,0 +1,35 @@
+@forward './reset.css';
+@use './_variables.scss' as *;
+
+@font-face {
+  font-family: "VitroCore";
+  src: local("/fonts/VitroCore.ttf"), url("/fonts/VitroCore.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "VitroPride";
+  src: local("/fonts/VitroPride.ttf"), url("/fonts/VitroPride.ttf");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "SpoqaHanSansRegular";
+  src: local("/fonts/SpoqaHanSansRegular.woff2"), url("/fonts/SpoqaHanSansRegular.woff2");
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $ui-font;
+}
+
+button {
+  display: block;
+  font-family: inherit;
+  border: none;
+}
