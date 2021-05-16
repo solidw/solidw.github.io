@@ -32,7 +32,6 @@ module.exports = {
       'error',
       2,
     ],
-
   },
   settings: {
     'import/resolver': {
