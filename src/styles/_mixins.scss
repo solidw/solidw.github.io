@@ -1,0 +1,14 @@
+@use './colors' as colors;
+
+@mixin neumorphise() {
+  background: colors.$primary;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 10px colors.$shadow1, -5px -5px 10px colors.$shadow2;
+}
+
+@mixin neumorphiseHover() {
+  background: colors.$primary;
+  border-radius: 1rem;
+  background: linear-gradient(145deg, colors.$button-hover-gradient1, colors.$button-hover-gradient2);
+  box-shadow: 5px 5px 10px #8282d9, -5px -5px 10px #b0b0ff;
+}
