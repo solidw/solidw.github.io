@@ -16,20 +16,48 @@
 
 @font-face {
   font-family: "SpoqaHanSansRegular";
-  src: local("/fonts/SpoqaHanSansRegular.woff2"), url("/fonts/SpoqaHanSansRegular.woff2");
+  src: local("/fonts/SpoqaHanSansRegular.woff2"),
+    url("/fonts/SpoqaHanSansRegular.woff2");
   font-style: normal;
 }
 
-* {
-  box-sizing: border-box;
+html {
+  font-size: 62.5%;
 }
 
 body {
   font-family: $ui-font;
+  font-size: 1.6rem;
 }
 
 button {
   display: block;
   font-family: inherit;
   border: none;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6,
+p,
+span {
+  font-size: 1.6rem;
 }
