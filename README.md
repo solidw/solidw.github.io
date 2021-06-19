@@ -7,4 +7,5 @@ TBA..
 - Next.js
 - React
 - Redux
+- Yarn berry(v2)
 - ...
