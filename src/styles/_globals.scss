@@ -30,6 +30,12 @@ body {
   font-size: 1.6rem;
 }
 
+html,
+body,
+#__next {
+  height: 100%;
+}
+
 button {
   display: block;
   font-family: inherit;
