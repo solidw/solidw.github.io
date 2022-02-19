@@ -1,11 +1,7 @@
-import Button from '#/components/atoms/Button';
+import Button from "#/components/Button";
 
-const Index = () => (
-  <Button>
-    <p>
-      Hi
-    </p>
-  </Button>
-);
+const Index = () => {
+  return <Button>hi</Button>;
+};
 
 export default Index;
