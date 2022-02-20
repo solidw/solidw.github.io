@@ -42,3 +42,29 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+@font-face {
+  font-family: "VitroCore";
+  src: local("/fonts/VitroCore.ttf"), url("/fonts/VitroCore.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "VitroPride";
+  src: local("/fonts/VitroPride.ttf"), url("/fonts/VitroPride.ttf");
+  font-style: normal;
+  font-weight: 600;
+}
+
+body {
+	font-family: "VitroPride", "VitroCore", "SpoqaHanSansRegular", Arial, Helvetica, sans-serif;
+	font-size: 1.6rem;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+html, body, #__next {
+	height: 100%;
+}

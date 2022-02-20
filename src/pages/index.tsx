@@ -1,7 +1,15 @@
-import Button from "#/components/Button";
+import { GetServerSideProps } from "next";
 
-const Index = () => {
-  return <Button>hi</Button>;
+export default function Index() {
+  return null;
+}
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+      destination: "/posts",
+      permanent: true,
+    },
+    props: {},
+  };
 };
-
-export default Index;

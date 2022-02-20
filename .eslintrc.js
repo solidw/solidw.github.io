@@ -20,6 +20,7 @@ module.exports = {
     "no-use-before-define": 0,
     indent: 0,
     "@typescript-eslint/indent": ["error", 2],
+    "@typescript-eslint/no-empty-interface": 0,
   },
   settings: {
     "import/resolver": {
