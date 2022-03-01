@@ -9,10 +9,7 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "lib": [
-      "dom",
-      "es2017"
-    ],
+    "lib": ["dom", "es2017"],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
@@ -26,23 +23,12 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "#/*": [
-        "./src/*"
-      ]
+      "#/*": ["./src/*"]
     },
     "incremental": true,
-    "types": [
-      "@emotion/react/types/css-prop"
-    ],
+    "types": ["@emotion/react/types/css-prop", "jest"],
     "jsxImportSource": "@emotion/react"
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "next-env.d.ts",
-    "next.config.js"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts", "next.config.js"],
+  "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"]
 }
