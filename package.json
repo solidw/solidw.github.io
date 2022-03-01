@@ -14,8 +14,10 @@
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "next": "^12.1.0",
+    "next-transpile-modules": "^9.0.0",
     "react": "^17",
-    "react-dom": "^17"
+    "react-dom": "^17",
+    "react-markdown": "^8.0.0"
   },
   "devDependencies": {
     "@types/node": "^17",
