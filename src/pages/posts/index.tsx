@@ -1,11 +1,13 @@
 import fs from "fs";
 import path from "path";
+import { css } from "@emotion/react";
 import frontMatterParser from "front-matter";
 import { GetStaticProps } from "next";
-import Link from "next/link";
+import { Fragment } from "react";
 import { Article } from "#/components/Article";
+import { Hr } from "#/components/Hr";
 import { Page } from "#/components/Page";
-import { Section } from "#/components/Section";
+import { PostCard } from "#/components/PostCard";
 import { Title } from "#/components/Title";
 import { PostFrontMatters, PostSummary } from "#/types/Post";
 import { dateUtils } from "#/utils/date";
@@ -14,17 +16,32 @@ import { postUtils } from "#/utils/post";
 export default function PostsPage({ posts }: { posts: PostSummary[] }) {
   return (
     <Page title="포스트">
-      <Article>
-        <Title>포스트</Title>
-        <Section>
-          {posts.map((post) => (
-            <Link key={post.path} href={`/posts/${post.path}`}>
-              <span>
-                {post.title} | {dateUtils.formatKRDate(post.date)}
-              </span>
-            </Link>
+      <Article
+        css={css`
+          padding: 0;
+          padding-top: 30px;
+        `}
+      >
+        <Title
+          css={css`
+            padding: 0px 30px;
+          `}
+        >
+          포스트
+        </Title>
+        <ul
+          css={css`
+            display: flex;
+            flex-direction: column;
+          `}
+        >
+          {posts.map((post, index) => (
+            <Fragment key={post.path}>
+              <PostCard key={post.path} post={post} />
+              {index !== posts.length - 1 && <Hr />}
+            </Fragment>
           ))}
-        </Section>
+        </ul>
       </Article>
     </Page>
   );

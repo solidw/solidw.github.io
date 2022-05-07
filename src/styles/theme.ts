@@ -39,6 +39,9 @@ const GREY = {
   900: "#212121",
 };
 
+const WHITE = "#ffffff";
+const BLACK = "#000000";
+
 export const theme: Theme = {
   palette: {
     primary: {
@@ -57,5 +60,16 @@ export const theme: Theme = {
       main: GREY[200],
       dark: GREY[400],
     },
+    white: WHITE,
+    black: BLACK,
   },
+};
+
+export const neumorphismTheme = {
+  background: "#f0f0ff",
+  lightShadow: "#ffffff",
+  darkShadow: "#c2c2cf",
+  font: "#BABECC",
+  white: "#FFFFFF",
+  black: "#000000",
 };

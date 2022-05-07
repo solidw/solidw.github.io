@@ -1,38 +1,40 @@
-import { css, useTheme } from "@emotion/react";
+import { css } from "@emotion/react";
 import { HTMLAttributes } from "react";
+import { neumorphismTheme } from "#/styles/theme";
+import { defualtTransition } from "#/styles/utils";
 
-interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
-}
+interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {}
 
-const Button = ({ children, ...props }: ButtonProps) => {
-  const theme = useTheme();
-
+export function Button({ children, ...props }: ButtonProps) {
   return (
     <button
       css={css`
         padding: 8px 20px;
-        color: #f5f5f5;
-        font-size: 16px;
-        background: ${theme.palette.primary.main};
-        box-shadow: 0 4px 8px 0 ${theme.palette.primary.light};
+        font-size: 1.6rem;
+        border-radius: 8px;
         border: none;
-        border-radius: 12px;
+
+        ${defualtTransition};
+
+        background: ${neumorphismTheme.background};
+        box-shadow: -5px -5px 20px ${neumorphismTheme.lightShadow},
+          5px 5px 20px ${neumorphismTheme.darkShadow};
 
         &:hover {
-          background: ${theme.palette.primary.light};
-        }
-        &:active {
-          background: ${theme.palette.primary.main};
+          box-shadow: -2px -2px 5px ${neumorphismTheme.lightShadow},
+            2px 2px 5px ${neumorphismTheme.darkShadow};
         }
 
-        transition: background-color 0.1s;
+        &:active {
+          box-shadow: inset 1px 1px 2px ${neumorphismTheme.darkShadow},
+            inset -1px -1px 2px ${neumorphismTheme.lightShadow};
+        }
+
+        text-shadow: 1px 1px 0 ${neumorphismTheme.lightShadow};
       `}
       {...props}
     >
       {children}
     </button>
   );
-};
-
-export default Button;
+}

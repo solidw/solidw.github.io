@@ -1,8 +1,27 @@
-import { css, useTheme } from "@emotion/react";
-import { ReactNode } from "react";
+import { css } from "@emotion/react";
+import { HTMLAttributes } from "react";
+import { theme } from "#/styles/theme";
 
-export function Badge({ children }: { children: ReactNode }) {
-  const theme = useTheme();
+interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
+  size?: "small" | "medium";
+}
+
+const sizeToCss = (size: BadgeProps["size"]) => {
+  switch (size) {
+    case "small":
+      return {
+        padding: "0.5rem 1rem",
+        fontSize: "1.4rem",
+      };
+    case "medium":
+      return {
+        padding: "0.75rem 1.5rem",
+        fontSize: "1.6rem",
+      };
+  }
+};
+
+export function Badge({ size = "medium", children, ...props }: BadgeProps) {
   return (
     <span
       css={css`
@@ -10,12 +29,12 @@ export function Badge({ children }: { children: ReactNode }) {
         justify-content: center;
         align-items: center;
         align-self: flex-start;
-        flex: 1;
-        background-color: ${theme.palette.secondary.dark};
-        border-radius: 12px;
-        padding: 1rem;
-        color: ${theme.palette.fontColor.main};
+        background-color: ${theme.palette.primary.dark};
+        color: ${theme.palette.white};
+        border-radius: 16px;
+        ${sizeToCss(size)}
       `}
+      {...props}
     >
       {children}
     </span>

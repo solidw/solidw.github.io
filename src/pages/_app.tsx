@@ -1,7 +1,7 @@
 import { css, Global, ThemeProvider } from "@emotion/react";
 import type { AppProps } from "next/app";
 import { normalize } from "#/styles/normalize";
-import { theme } from "#/styles/theme";
+import { neumorphismTheme, theme } from "#/styles/theme";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -10,7 +10,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         styles={css`
           ${normalize}
           html {
-            background-color: ${theme.palette.background};
+            color: ${neumorphismTheme.black};
+            background-color: ${neumorphismTheme.background};
+            letter-spacing: -0.2px;
           }
         `}
       />

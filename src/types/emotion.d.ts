@@ -16,6 +16,8 @@ declare module "@emotion/react" {
       secondary: DetailedColor;
       fontColor: DetailedColor;
       background: string;
+      white: string;
+      black: string;
     };
   }
 }
