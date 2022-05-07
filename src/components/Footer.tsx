@@ -1,4 +1,6 @@
 import { css } from "@emotion/react";
+import { neumorphismTheme } from "#/styles/theme";
+import { normalizeLink } from "#/styles/utils";
 
 const year = new Date().getFullYear();
 
@@ -18,7 +20,8 @@ export function Footer() {
         target="_blank"
         rel="noopener noreferrer"
         css={css`
-          text-decoration: none;
+          ${normalizeLink};
+          color: ${neumorphismTheme.primary};
         `}
       >
         <span>@solidw</span>

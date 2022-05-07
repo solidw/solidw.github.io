@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { css } from "@emotion/react";
 import frontMatterParser from "front-matter";
 import { GetStaticPaths, GetStaticProps } from "next";
 import ReactMarkdown from "react-markdown";
@@ -9,6 +10,7 @@ import { Page } from "#/components/Page";
 import { Section } from "#/components/Section";
 import { Stack } from "#/components/Stack";
 import { Title } from "#/components/Title";
+import { neumorphismTheme } from "#/styles/theme";
 import { PostAttributes, PostFrontMatters } from "#/types/Post";
 import { dateUtils } from "#/utils/date";
 import { postUtils } from "#/utils/post";
@@ -26,8 +28,20 @@ export default function PostPage({
     <Page title={fileName}>
       <Article>
         <Section>
-          <Title>{attributes.title}</Title>
-          <Badge>{dateUtils.formatKRDate(attributes.date)}</Badge>
+          <Title
+            css={css`
+              margin-bottom: 10px;
+            `}
+          >
+            {attributes.title}
+          </Title>
+          <span
+            css={css`
+              color: ${neumorphismTheme.font};
+            `}
+          >
+            {dateUtils.formatDateToShow(attributes.date)}
+          </span>
         </Section>
         <Stack.Vertical>
           <ReactMarkdown children={body} />

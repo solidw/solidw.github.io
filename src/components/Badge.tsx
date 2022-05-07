@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import { HTMLAttributes } from "react";
-import { theme } from "#/styles/theme";
+import { neumorphismTheme, theme } from "#/styles/theme";
 
 interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
   size?: "small" | "medium";
@@ -29,8 +29,8 @@ export function Badge({ size = "medium", children, ...props }: BadgeProps) {
         justify-content: center;
         align-items: center;
         align-self: flex-start;
-        background-color: ${theme.palette.primary.dark};
-        color: ${theme.palette.white};
+        background-color: ${neumorphismTheme.primary};
+        color: ${neumorphismTheme.white};
         border-radius: 16px;
         ${sizeToCss(size)}
       `}

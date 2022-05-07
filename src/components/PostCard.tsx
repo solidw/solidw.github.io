@@ -21,7 +21,7 @@ export function PostCard({ post }: { post: PostSummary }) {
           >
             {post.description}
           </p>
-          <Badge size="small">{dateUtils.formatKRDate(post.date)}</Badge>
+          <Badge size="small">{dateUtils.formatDateToShow(post.date)}</Badge>
         </Card>
       </a>
     </Link>

@@ -69,7 +69,8 @@ export const neumorphismTheme = {
   background: "#f0f0ff",
   lightShadow: "#ffffff",
   darkShadow: "#c2c2cf",
-  font: "#BABECC",
-  white: "#FFFFFF",
-  black: "#000000",
+  font: PURPLE[500],
+  white: WHITE,
+  black: BLACK,
+  primary: PURPLE[600],
 };
