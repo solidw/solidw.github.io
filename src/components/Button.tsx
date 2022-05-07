@@ -1,6 +1,7 @@
 import { css, useTheme } from "@emotion/react";
+import { HTMLAttributes } from "react";
 
-interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
 }
 

@@ -1,14 +1,16 @@
-import Button from "#/components/Button";
+import { Article } from "#/components/Article";
 import { Page } from "#/components/Page";
-import { Stack } from "#/components/Stack";
+import { Section } from "#/components/Section";
+import { Title } from "#/components/Title";
 
 export default function MePage() {
   return (
-    <Page title='ME' wide>
-      <Stack.Vertical>
-        ME
-        <Button>test</Button>
-      </Stack.Vertical>
+    <Page title="solidw">
+      <Article>
+        <Section>
+          <Title>solidw</Title>
+        </Section>
+      </Article>
     </Page>
   );
 }

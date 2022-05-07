@@ -1,9 +1,8 @@
-import { theme } from "#/styles/theme";
-import { normalizeLink } from "#/styles/utils";
 import { css, useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
 import Link, { LinkProps } from "next/link";
 import { ReactNode } from "react";
+import { normalizeLink } from "#/styles/utils";
 
 Header.height = 80;
 
@@ -13,10 +12,14 @@ export function Header() {
   return (
     <header
       css={css`
-        position: fixed;
-        width: 100%;
+        position: sticky;
+        top: 0;
         height: ${Header.height}px;
-        background: ${theme.palette.primary.dark};
+        background: linear-gradient(
+          45deg,
+          ${theme.palette.primary.main},
+          ${theme.palette.secondary.main}
+        );
         z-index: 1;
         display: flex;
         justify-content: space-between;
@@ -28,10 +31,11 @@ export function Header() {
       <Ul>
         <Li>
           <ALink
-            href='/'
+            href="/"
             passHref
             css={css`
               font-size: 2.4rem;
+              font-weight: bold;
             `}
           >
             solidw.dev
@@ -45,12 +49,12 @@ export function Header() {
         `}
       >
         <Li>
-          <ALink href='/me' passHref>
+          <ALink href="/me" passHref>
             ME
           </ALink>
         </Li>
         <Li>
-          <ALink href='/posts' passHref>
+          <ALink href="/posts" passHref>
             POST
           </ALink>
         </Li>

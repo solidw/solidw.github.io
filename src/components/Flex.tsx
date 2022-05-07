@@ -1,26 +1,12 @@
 import { css } from "@emotion/react";
-import { HTMLAttributes, ReactNode } from "react";
+import { CSSProperties, HTMLProps, ReactNode } from "react";
 
 type Direction = "row" | "column";
 
-type AlignmentOption =
-  | "center"
-  | "start"
-  | "end"
-  | "flex-start"
-  | "flex-end"
-  | "left"
-  | "right"
-  | "normal"
-  | "space-between"
-  | "space-around"
-  | "space-evenly"
-  | "stretch";
-
-interface FlexProps extends HTMLAttributes<HTMLDivElement> {
+interface FlexProps extends HTMLProps<HTMLDivElement> {
   direction?: Direction;
-  justify?: AlignmentOption;
-  align?: AlignmentOption;
+  justify?: CSSProperties["justifyContent"];
+  align?: CSSProperties["alignItems"];
   children?: ReactNode;
 }
 

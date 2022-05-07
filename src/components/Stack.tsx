@@ -25,7 +25,7 @@ Stack.Vertical = function ({
   ...props
 }: Omit<StackProps, "direction"> & { children?: ReactNode }) {
   return (
-    <Stack direction='column' {...props}>
+    <Stack direction="column" {...props}>
       {children}
     </Stack>
   );
@@ -36,7 +36,7 @@ Stack.Horizontal = function ({
   ...props
 }: Omit<StackProps, "direction"> & { children?: ReactNode }) {
   return (
-    <Stack direction='row' {...props}>
+    <Stack direction="row" {...props}>
       {children}
     </Stack>
   );

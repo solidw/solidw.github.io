@@ -9,15 +9,13 @@ type DetailedColor = {
   dark: string;
 };
 
-type Color = `#${string}`;
-
 declare module "@emotion/react" {
   export interface Theme {
     palette: {
       primary: DetailedColor;
       secondary: DetailedColor;
       fontColor: DetailedColor;
-      background: Color;
+      background: string;
     };
   }
 }

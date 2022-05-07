@@ -51,7 +51,7 @@ export const theme: Theme = {
       main: BURGUNDY[200],
       dark: BURGUNDY[400],
     },
-    background: "#e0e0e0",
+    background: GREY[50],
     fontColor: {
       light: GREY[100],
       main: GREY[200],

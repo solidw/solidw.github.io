@@ -26,7 +26,7 @@
       "#/*": ["./src/*"]
     },
     "incremental": true,
-    "types": ["@emotion/react/types/css-prop", "jest"],
+    "types": ["@emotion/react"],
     "jsxImportSource": "@emotion/react"
   },
   "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts", "next.config.js"],
