@@ -19,16 +19,16 @@ export default function PostsPage({ posts }: { posts: PostSummary[] }) {
       <Article
         css={css`
           padding: 0;
-          padding-top: 30px;
         `}
       >
         <Title
           css={css`
-            padding: 0px 30px;
+            padding: 30px 30px;
           `}
         >
           포스트
         </Title>
+        <Hr />
         <ul
           css={css`
             display: flex;

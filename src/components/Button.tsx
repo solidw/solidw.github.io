@@ -15,10 +15,10 @@ export function Button({ children, ...props }: ButtonProps) {
         border: none;
 
         ${defualtTransition};
-
+        color: ${neumorphismTheme.text};
         background: ${neumorphismTheme.background};
-        box-shadow: -5px -5px 20px ${neumorphismTheme.lightShadow},
-          5px 5px 20px ${neumorphismTheme.darkShadow};
+        box-shadow: -4px -4px 10px ${neumorphismTheme.lightShadow},
+          4px 4px 10px ${neumorphismTheme.darkShadow};
 
         &:hover {
           box-shadow: -2px -2px 5px ${neumorphismTheme.lightShadow},
@@ -29,8 +29,6 @@ export function Button({ children, ...props }: ButtonProps) {
           box-shadow: inset 1px 1px 2px ${neumorphismTheme.darkShadow},
             inset -1px -1px 2px ${neumorphismTheme.lightShadow};
         }
-
-        text-shadow: 1px 1px 0 ${neumorphismTheme.lightShadow};
       `}
       {...props}
     >

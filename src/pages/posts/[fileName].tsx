@@ -5,12 +5,10 @@ import frontMatterParser from "front-matter";
 import { GetStaticPaths, GetStaticProps } from "next";
 import ReactMarkdown from "react-markdown";
 import { Article } from "#/components/Article";
-import { Badge } from "#/components/Badge";
+import { Hr } from "#/components/Hr";
 import { Page } from "#/components/Page";
-import { Section } from "#/components/Section";
 import { Stack } from "#/components/Stack";
 import { Title } from "#/components/Title";
-import { neumorphismTheme } from "#/styles/theme";
 import { PostAttributes, PostFrontMatters } from "#/types/Post";
 import { dateUtils } from "#/utils/date";
 import { postUtils } from "#/utils/post";
@@ -27,23 +25,27 @@ export default function PostPage({
   return (
     <Page title={fileName}>
       <Article>
-        <Section>
-          <Title
-            css={css`
-              margin-bottom: 10px;
-            `}
-          >
-            {attributes.title}
-          </Title>
-          <span
-            css={css`
-              color: ${neumorphismTheme.font};
-            `}
-          >
-            {dateUtils.formatDateToShow(attributes.date)}
-          </span>
-        </Section>
-        <Stack.Vertical>
+        <Title
+          css={css`
+            margin-bottom: 10px;
+          `}
+        >
+          {attributes.title}
+        </Title>
+        <span
+          css={css`
+            margin-bottom: 10px;
+          `}
+        >
+          {dateUtils.formatDateToShow(attributes.date)}
+        </span>
+        <Hr />
+
+        <Stack.Vertical
+          css={css`
+            margin-top: 40px;
+          `}
+        >
           <ReactMarkdown children={body} />
         </Stack.Vertical>
       </Article>

@@ -66,11 +66,14 @@ export const theme: Theme = {
 };
 
 export const neumorphismTheme = {
-  background: "#f0f0ff",
-  lightShadow: "#ffffff",
-  darkShadow: "#c2c2cf",
-  font: PURPLE[500],
+  background: "#503d6b",
+  lightShadow: "#7d61a8",
+  darkShadow: "#44345b",
+  textOpposite: "#503d6b",
+  text: GREY[400],
+  textLight: GREY[300],
+  textDark: GREY[500],
+
   white: WHITE,
   black: BLACK,
-  primary: PURPLE[600],
 };

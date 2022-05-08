@@ -89,6 +89,4 @@ const Ul = styled.ul`
   font-size: 1.4rem;
 `;
 
-const Li = styled.li`
-  color: ${theme.palette.black};
-`;
+const Li = styled.li``;

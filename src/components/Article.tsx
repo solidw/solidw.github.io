@@ -12,12 +12,11 @@ export function Article({ children, ...props }: ArticleProps) {
         display: flex;
         flex-direction: column;
         margin: 0 auto;
-        gap: 40px;
         margin-top: 40px;
 
         padding: 30px;
-        box-shadow: 5px 5px 20px ${neumorphismTheme.darkShadow},
-          -5px -5px 20px ${neumorphismTheme.lightShadow};
+        box-shadow: 3px 3px 5px ${neumorphismTheme.darkShadow},
+          -3px -3px 5px ${neumorphismTheme.lightShadow};
       `}
       {...props}
     >

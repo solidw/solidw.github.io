@@ -15,8 +15,9 @@ export function PostCard({ post }: { post: PostSummary }) {
           <h2>{post.title}</h2>
           <p
             css={css`
-              font-size: 2rem;
+              font-size: 1.6rem;
               margin: 12px 0px 40px;
+              color: ${neumorphismTheme.textDark};
             `}
           >
             {post.description}
@@ -31,12 +32,11 @@ export function PostCard({ post }: { post: PostSummary }) {
 const Card = styled.li`
   display: flex;
   flex-direction: column;
-  color: ${neumorphismTheme.black};
   border-radius: 4px;
   padding: 30px;
 
   ${defualtTransition};
-  border: 1px solid ${neumorphismTheme.darkShadow};
+  /* border: 1px solid ${neumorphismTheme.darkShadow}; */
 
   &:hover {
     box-shadow: -2px -2px 5px ${neumorphismTheme.lightShadow},
