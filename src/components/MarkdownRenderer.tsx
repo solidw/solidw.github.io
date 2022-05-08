@@ -1,7 +1,7 @@
 import { ComponentProps } from "react";
 import ReactMarkdown from "react-markdown";
 import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter";
-import dark from "react-syntax-highlighter/dist/esm/styles/prism/dark";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { createNeumorphismBoxShadow } from "#/styles/utils";
 
 interface MarkdownRendererProps extends ComponentProps<typeof ReactMarkdown> {}
@@ -17,7 +17,7 @@ export function MarkdownRenderer(renderProps: MarkdownRendererProps) {
             <SyntaxHighlighter
               children={String(children).replace(/\n$/, "")}
               // eslint-disable-next-line @typescript-eslint/no-explicit-any
-              style={dark as any}
+              style={vscDarkPlus as any}
               customStyle={{
                 background: "none",
                 border: "none",
