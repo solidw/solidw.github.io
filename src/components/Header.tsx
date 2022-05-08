@@ -4,7 +4,7 @@ import Link, { LinkProps } from "next/link";
 import { ReactNode } from "react";
 import { Button } from "./Button";
 import { neumorphismTheme, theme } from "#/styles/theme";
-import { normalizeLink } from "#/styles/utils";
+import { createNeumorphismBoxShadow, normalizeLink } from "#/styles/utils";
 
 Header.height = 80;
 
@@ -23,8 +23,7 @@ export function Header() {
         padding: 0px 30px;
 
         background-color: ${neumorphismTheme.background};
-
-        box-shadow: 0px 5px 5px ${neumorphismTheme.darkShadow};
+        box-shadow: ${createNeumorphismBoxShadow(5, 5)};
       `}
     >
       <Ul>

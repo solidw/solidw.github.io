@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import { HTMLAttributes } from "react";
 import { neumorphismTheme } from "#/styles/theme";
-import { defualtTransition } from "#/styles/utils";
+import { createNeumorphismBoxShadow, defualtTransition } from "#/styles/utils";
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {}
 
@@ -17,17 +17,14 @@ export function Button({ children, ...props }: ButtonProps) {
         ${defualtTransition};
         color: ${neumorphismTheme.text};
         background: ${neumorphismTheme.background};
-        box-shadow: -4px -4px 10px ${neumorphismTheme.lightShadow},
-          4px 4px 10px ${neumorphismTheme.darkShadow};
+        box-shadow: ${createNeumorphismBoxShadow(4, 10)};
 
         &:hover {
-          box-shadow: -2px -2px 5px ${neumorphismTheme.lightShadow},
-            2px 2px 5px ${neumorphismTheme.darkShadow};
+          box-shadow: ${createNeumorphismBoxShadow(2, 5)};
         }
 
         &:active {
-          box-shadow: inset 1px 1px 2px ${neumorphismTheme.darkShadow},
-            inset -1px -1px 2px ${neumorphismTheme.lightShadow};
+          box-shadow: ${createNeumorphismBoxShadow(1, 2, { inset: true })};
         }
       `}
       {...props}

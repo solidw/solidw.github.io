@@ -3,9 +3,9 @@ import path from "path";
 import { css } from "@emotion/react";
 import frontMatterParser from "front-matter";
 import { GetStaticPaths, GetStaticProps } from "next";
-import ReactMarkdown from "react-markdown";
 import { Article } from "#/components/Article";
 import { Hr } from "#/components/Hr";
+import { MarkdownRenderer } from "#/components/MarkdownRenderer";
 import { Page } from "#/components/Page";
 import { Stack } from "#/components/Stack";
 import { Title } from "#/components/Title";
@@ -14,16 +14,14 @@ import { dateUtils } from "#/utils/date";
 import { postUtils } from "#/utils/post";
 
 export default function PostPage({
-  fileName,
   attributes,
   body,
 }: {
-  fileName: string;
   attributes: PostAttributes;
   body: string;
 }) {
   return (
-    <Page title={fileName}>
+    <Page title={attributes.title}>
       <Article>
         <Title
           css={css`
@@ -40,13 +38,12 @@ export default function PostPage({
           {dateUtils.formatDateToShow(attributes.date)}
         </span>
         <Hr />
-
         <Stack.Vertical
           css={css`
             margin-top: 40px;
           `}
         >
-          <ReactMarkdown children={body} />
+          <MarkdownRenderer children={body} />
         </Stack.Vertical>
       </Article>
     </Page>

@@ -3,7 +3,11 @@ import styled from "@emotion/styled";
 import Link from "next/link";
 import { Badge } from "./Badge";
 import { neumorphismTheme } from "#/styles/theme";
-import { defualtTransition, normalizeLink } from "#/styles/utils";
+import {
+  createNeumorphismBoxShadow,
+  defualtTransition,
+  normalizeLink,
+} from "#/styles/utils";
 import { PostSummary } from "#/types/Post";
 import { dateUtils } from "#/utils/date";
 
@@ -36,15 +40,12 @@ const Card = styled.li`
   padding: 30px;
 
   ${defualtTransition};
-  /* border: 1px solid ${neumorphismTheme.darkShadow}; */
 
   &:hover {
-    box-shadow: -2px -2px 5px ${neumorphismTheme.lightShadow},
-      2px 2px 5px ${neumorphismTheme.darkShadow};
+    box-shadow: ${createNeumorphismBoxShadow(2, 5)};
   }
 
   &:active {
-    box-shadow: inset 1px 1px 2px ${neumorphismTheme.darkShadow},
-      inset -1px -1px 2px ${neumorphismTheme.lightShadow};
+    box-shadow: ${createNeumorphismBoxShadow(1, 2, { inset: true })};
   }
 `;

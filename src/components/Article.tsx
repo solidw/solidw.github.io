@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import { HTMLAttributes } from "react";
-import { neumorphismTheme } from "#/styles/theme";
+import { createNeumorphismBoxShadow } from "#/styles/utils";
 
 interface ArticleProps extends HTMLAttributes<HTMLElement> {}
 
@@ -15,8 +15,7 @@ export function Article({ children, ...props }: ArticleProps) {
         margin-top: 40px;
 
         padding: 30px;
-        box-shadow: 3px 3px 5px ${neumorphismTheme.darkShadow},
-          -3px -3px 5px ${neumorphismTheme.lightShadow};
+        box-shadow: ${createNeumorphismBoxShadow(3, 5)};
       `}
       {...props}
     >
