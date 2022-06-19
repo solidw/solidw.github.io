@@ -21,8 +21,7 @@ export function Footer() {
         rel="noopener noreferrer"
         css={css`
           ${normalizeLink};
-          color: ${neumorphismTheme.primary};
-          text-shadow: 1px 1px 0 ${neumorphismTheme.white};
+          color: ${neumorphismTheme.secondary};
         `}
       >
         <span>@solidw</span>
