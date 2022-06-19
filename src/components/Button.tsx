@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import { HTMLAttributes } from "react";
-import { neumorphismTheme, Variant } from "#/styles/theme";
+import { neumorphismTheme } from "#/styles/theme";
 import { createNeumorphismBoxShadow, defualtTransition } from "#/styles/utils";
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
