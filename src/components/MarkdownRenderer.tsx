@@ -4,7 +4,7 @@ import html from "rehype-stringify";
 import { remark } from "remark";
 import remarkParse from "remark-parse";
 import remark2rehype from "remark-rehype";
-import { theme } from "#/styles/theme";
+import { neumorphismTheme, theme } from "#/styles/theme";
 import { createNeumorphismBoxShadow } from "#/styles/utils";
 
 interface MarkdownRendererProps {
@@ -17,7 +17,6 @@ export function MarkdownRenderer({ markdown }: MarkdownRendererProps) {
     .use(remark2rehype)
     .use(html)
     .use(highlight, { prefix: "token " })
-    // .use(remarkPrism)
     .processSync(markdown)
     .toString();
 
@@ -25,6 +24,24 @@ export function MarkdownRenderer({ markdown }: MarkdownRendererProps) {
 }
 
 const MarkdownRenderBlock = styled.div`
+  line-height: 3rem;
+  blockquote {
+    box-shadow: ${createNeumorphismBoxShadow(1, 2, { inset: true })};
+    margin: 0;
+    padding: 5px;
+    border-left: 0.25em solid ${neumorphismTheme.secondary};
+    & > * {
+      margin: 0;
+    }
+  }
+
+  p > code {
+    box-shadow: ${createNeumorphismBoxShadow(1, 2, { inset: true })};
+    padding: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
   code[class*="language-"],
   pre[class*="language-"] {
     color: #000;

@@ -20,7 +20,6 @@ export function PostCard({ post }: { post: PostSummary }) {
           <p
             css={css`
               font-size: 1.6rem;
-              margin: 12px 0px 40px;
               color: ${neumorphismTheme.primaryText};
             `}
           >
@@ -37,6 +36,7 @@ const Card = styled.li`
   display: flex;
   flex-direction: column;
   border-radius: 4px;
+
   padding: 30px;
 
   ${defualtTransition};

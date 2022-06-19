@@ -38,11 +38,7 @@ export default function PostPage({
           {dateUtils.formatDateToShow(attributes.date)}
         </span>
         <Hr />
-        <Stack.Vertical
-          css={css`
-            margin-top: 40px;
-          `}
-        >
+        <Stack.Vertical>
           <MarkdownRenderer markdown={body} />
         </Stack.Vertical>
       </Article>

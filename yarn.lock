@@ -1802,6 +1802,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^5.12.0
     "@typescript-eslint/parser": ^5.12.0
     date-fns: ^2.28.0
+    emotion-normalize: ^11.0.1
     eslint: ^8.9.0
     eslint-config-prettier: ^8.4.0
     eslint-import-resolver-alias: ^1.1.2
@@ -2477,6 +2478,16 @@ __metadata:
   version: 9.2.2
   resolution: "emoji-regex@npm:9.2.2"
   checksum: 8487182da74aabd810ac6d6f1994111dfc0e331b01271ae01ec1eb0ad7b5ecc2bbbbd2f053c05cb55a1ac30449527d819bbfbf0e3de1023db308cbcb47f86601
+  languageName: node
+  linkType: hard
+
+"emotion-normalize@npm:^11.0.1":
+  version: 11.0.1
+  resolution: "emotion-normalize@npm:11.0.1"
+  peerDependencies:
+    "@emotion/react": ^11.0.0
+    react: ">=16.3.0"
+  checksum: f33c6ac75eca2d52d84cad99e359c0e73f78f814377121743c6002edb903864d8ad0adaf2a760dfac5a9c18dc5591ef01a7985f5c223973b10e7d20fa706f226
   languageName: node
   linkType: hard
 

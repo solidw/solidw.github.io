@@ -86,6 +86,10 @@ const Ul = styled.ul`
   align-items: center;
   gap: 20px;
   font-size: 1.4rem;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
 `;
 
 const Li = styled.li``;

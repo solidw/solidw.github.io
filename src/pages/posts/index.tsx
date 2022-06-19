@@ -23,7 +23,7 @@ export default function PostsPage({ posts }: { posts: PostSummary[] }) {
       >
         <Title
           css={css`
-            padding: 30px 30px;
+            padding: 15px 30px;
           `}
         >
           포스트
@@ -33,6 +33,8 @@ export default function PostsPage({ posts }: { posts: PostSummary[] }) {
           css={css`
             display: flex;
             flex-direction: column;
+            margin: 0;
+            padding: 0;
           `}
         >
           {posts.map((post, index) => (
