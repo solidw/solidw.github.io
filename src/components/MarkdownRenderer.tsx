@@ -121,7 +121,7 @@ const MarkdownRenderBlock = styled.div`
   .token.tag {
     color: #905;
   }
-  .token.attr-name,
+  .token.attr,
   .token.builtin,
   .token.char,
   .token.inserted,
@@ -142,8 +142,8 @@ const MarkdownRenderBlock = styled.div`
   .token.keyword {
     color: #07a;
   }
-  .token.class-name,
-  .token.function {
+  .token.class_,
+  .token.function_ {
     color: #dd4a68;
   }
   .token.important,
