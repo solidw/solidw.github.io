@@ -7,19 +7,6 @@ interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary";
 }
 
-const getShadowByVariant = (variant: Variant) => {
-  return {
-    shadowDark:
-      variant === "primary"
-        ? neumorphismTheme.primaryDarkShadow
-        : neumorphismTheme.secondaryDarkShadow,
-    shadowLight:
-      variant === "primary"
-        ? neumorphismTheme.primaryLightShadow
-        : neumorphismTheme.secondaryLightShadow,
-  };
-};
-
 export function Button({
   children,
   variant = "primary",
