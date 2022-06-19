@@ -29,7 +29,7 @@ export function Badge({ size = "medium", children, ...props }: BadgeProps) {
         justify-content: center;
         align-items: center;
         align-self: flex-start;
-        background-color: ${neumorphismTheme.darkShadow};
+        background-color: ${neumorphismTheme.primaryDarkShadow};
         border-radius: 16px;
         ${sizeToCss(size)}
       `}

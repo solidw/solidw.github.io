@@ -13,20 +13,32 @@ export const defualtTransition = `
 const calcNeumorphismBoxShadow = (
   distance: number,
   blur: number,
-  inset = false
+  {
+    shadowDark,
+    shadowLight,
+    inset = false,
+  }: { shadowDark: string; shadowLight: string; inset?: boolean }
 ) =>
-  `${inset ? "inset " : ""}${distance}px ${distance}px ${blur}px ${
-    neumorphismTheme.darkShadow
-  }, ${inset ? "inset " : ""}${-distance}px ${-distance}px ${blur}px ${
-    neumorphismTheme.lightShadow
-  }`;
+  `${
+    inset ? "inset " : ""
+  }${distance}px ${distance}px ${blur}px ${shadowDark}, ${
+    inset ? "inset " : ""
+  }${-distance}px ${-distance}px ${blur}px ${shadowLight}`;
 
 export const createNeumorphismBoxShadow = (
   distance: number,
   blur: number,
-  { inset = false } = {}
+  {
+    inset = false,
+    shadowDark = neumorphismTheme.primaryDarkShadow,
+    shadowLight = neumorphismTheme.primaryLightShadow,
+  } = {}
 ) => {
-  const boxShadow = calcNeumorphismBoxShadow(distance, blur, inset);
+  const boxShadow = calcNeumorphismBoxShadow(distance, blur, {
+    shadowDark,
+    shadowLight,
+    inset,
+  });
 
   return boxShadow;
 };

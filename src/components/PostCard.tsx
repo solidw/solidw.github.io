@@ -21,7 +21,7 @@ export function PostCard({ post }: { post: PostSummary }) {
             css={css`
               font-size: 1.6rem;
               margin: 12px 0px 40px;
-              color: ${neumorphismTheme.textDark};
+              color: ${neumorphismTheme.primaryText};
             `}
           >
             {post.description}

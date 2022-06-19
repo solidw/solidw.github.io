@@ -128,14 +128,11 @@ export const normalize = css`
   @font-face {
     font-family: "VitroCore";
     src: local("/fonts/VitroCore.ttf"), url("/fonts/VitroCore.ttf");
-    font-style: normal;
   }
 
   @font-face {
     font-family: "VitroPride";
     src: local("/fonts/VitroPride.ttf"), url("/fonts/VitroPride.ttf");
-    font-style: normal;
-    font-weight: 600;
   }
 
   body {

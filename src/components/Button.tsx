@@ -1,11 +1,30 @@
 import { css } from "@emotion/react";
 import { HTMLAttributes } from "react";
-import { neumorphismTheme } from "#/styles/theme";
+import { neumorphismTheme, Variant } from "#/styles/theme";
 import { createNeumorphismBoxShadow, defualtTransition } from "#/styles/utils";
 
-interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {}
+interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
+  variant?: "primary" | "secondary";
+}
 
-export function Button({ children, ...props }: ButtonProps) {
+const getShadowByVariant = (variant: Variant) => {
+  return {
+    shadowDark:
+      variant === "primary"
+        ? neumorphismTheme.primaryDarkShadow
+        : neumorphismTheme.secondaryDarkShadow,
+    shadowLight:
+      variant === "primary"
+        ? neumorphismTheme.primaryLightShadow
+        : neumorphismTheme.secondaryLightShadow,
+  };
+};
+
+export function Button({
+  children,
+  variant = "primary",
+  ...props
+}: ButtonProps) {
   return (
     <button
       css={css`
@@ -15,16 +34,20 @@ export function Button({ children, ...props }: ButtonProps) {
         border: none;
 
         ${defualtTransition};
-        color: ${neumorphismTheme.text};
-        background: ${neumorphismTheme.background};
-        box-shadow: ${createNeumorphismBoxShadow(4, 10)};
+        color: ${variant === "primary"
+          ? neumorphismTheme.primaryText
+          : neumorphismTheme.secondaryText};
+        background: ${neumorphismTheme[variant]};
+        box-shadow: ${createNeumorphismBoxShadow(5, 10)};
 
         &:hover {
           box-shadow: ${createNeumorphismBoxShadow(2, 5)};
         }
 
         &:active {
-          box-shadow: ${createNeumorphismBoxShadow(1, 2, { inset: true })};
+          box-shadow: ${createNeumorphismBoxShadow(1, 2, {
+            inset: true,
+          })};
         }
       `}
       {...props}

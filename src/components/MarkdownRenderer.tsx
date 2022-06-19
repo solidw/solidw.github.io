@@ -1,41 +1,147 @@
-import { ComponentProps } from "react";
-import ReactMarkdown from "react-markdown";
-import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter";
-import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import styled from "@emotion/styled";
+import highlight from "rehype-highlight";
+import html from "rehype-stringify";
+import { remark } from "remark";
+import remarkParse from "remark-parse";
+import remark2rehype from "remark-rehype";
+import { theme } from "#/styles/theme";
 import { createNeumorphismBoxShadow } from "#/styles/utils";
 
-interface MarkdownRendererProps extends ComponentProps<typeof ReactMarkdown> {}
-
-export function MarkdownRenderer(renderProps: MarkdownRendererProps) {
-  return (
-    <ReactMarkdown
-      components={{
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        code({ node, inline, className, children, ...props }) {
-          const match = /language-(\w+)/.exec(className || "");
-          return !inline && match ? (
-            <SyntaxHighlighter
-              children={String(children).replace(/\n$/, "")}
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
-              style={vscDarkPlus as any}
-              customStyle={{
-                background: "none",
-                border: "none",
-                boxShadow: createNeumorphismBoxShadow(3, 5, {
-                  inset: true,
-                }),
-              }}
-              language={match[1]}
-              {...props}
-            />
-          ) : (
-            <code className={className} {...props}>
-              {children}
-            </code>
-          );
-        },
-      }}
-      {...renderProps}
-    />
-  );
+interface MarkdownRendererProps {
+  markdown: string;
 }
+
+export function MarkdownRenderer({ markdown }: MarkdownRendererProps) {
+  const htmlText = remark()
+    .use(remarkParse)
+    .use(remark2rehype)
+    .use(html)
+    .use(highlight, { prefix: "token " })
+    // .use(remarkPrism)
+    .processSync(markdown)
+    .toString();
+
+  return <MarkdownRenderBlock dangerouslySetInnerHTML={{ __html: htmlText }} />;
+}
+
+const MarkdownRenderBlock = styled.div`
+  code[class*="language-"],
+  pre[class*="language-"] {
+    color: #000;
+    background: 0 0;
+    text-shadow: 0 1px #fff;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    font-size: 1em;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+  code[class*="language-"] ::-moz-selection,
+  code[class*="language-"]::-moz-selection,
+  pre[class*="language-"] ::-moz-selection,
+  pre[class*="language-"]::-moz-selection {
+    text-shadow: none;
+  }
+  code[class*="language-"] ::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] ::selection,
+  pre[class*="language-"]::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+  }
+  @media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+  pre[class*="language-"] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+  }
+  :not(pre) > code[class*="language-"],
+  pre {
+    background: ${theme.palette.primary.light};
+    box-shadow: ${createNeumorphismBoxShadow(3, 5, { inset: true })};
+    background: none;
+    border: none;
+    padding: 15px;
+  }
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em;
+    border-radius: 0.3em;
+    white-space: normal;
+  }
+  .token.cdata,
+  .token.comment,
+  .token.doctype,
+  .token.prolog {
+    color: #708090;
+  }
+  .token.punctuation {
+    color: #999;
+  }
+  .token.namespace {
+    opacity: 0.7;
+  }
+  .token.boolean,
+  .token.constant,
+  .token.deleted,
+  .token.number,
+  .token.property,
+  .token.symbol,
+  .token.tag {
+    color: #905;
+  }
+  .token.attr-name,
+  .token.builtin,
+  .token.char,
+  .token.inserted,
+  .token.selector,
+  .token.string {
+    color: #690;
+  }
+  .language-css .token.string,
+  .style .token.string,
+  .token.entity,
+  .token.operator,
+  .token.url {
+    color: #9a6e3a;
+    background: hsla(0, 0%, 100%, 0.5);
+  }
+  .token.atrule,
+  .token.attr-value,
+  .token.keyword {
+    color: #07a;
+  }
+  .token.class-name,
+  .token.function {
+    color: #dd4a68;
+  }
+  .token.important,
+  .token.regex,
+  .token.variable {
+    color: #e90;
+  }
+  .token.bold,
+  .token.important {
+    font-weight: 700;
+  }
+  .token.italic {
+    font-style: italic;
+  }
+  .token.entity {
+    cursor: help;
+  }
+`;

@@ -65,14 +65,18 @@ export const theme: Theme = {
   },
 };
 
+export type Variant = "primary" | "secondary";
+
 export const neumorphismTheme = {
-  background: "#503d6b",
-  lightShadow: "#7d61a8",
-  darkShadow: "#44345b",
-  textOpposite: "#503d6b",
-  text: GREY[400],
-  textLight: GREY[300],
-  textDark: GREY[500],
+  primary: "#d6d7ff",
+  primaryLightShadow: "#f6f7ff",
+  primaryDarkShadow: "#b6b7d9",
+  primaryText: "#001f3f",
+
+  secondary: "#6667AB",
+  secondaryLightShadow: "#7576c5",
+  secondaryDarkShadow: "#575891",
+  secondaryText: "#F6F5F7",
 
   white: WHITE,
   black: BLACK,

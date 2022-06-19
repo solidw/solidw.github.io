@@ -10,8 +10,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         styles={css`
           ${normalize}
           html {
-            color: ${neumorphismTheme.text};
-            background-color: ${neumorphismTheme.background};
+            color: ${neumorphismTheme.primaryText};
+            background-color: ${neumorphismTheme.primary};
+            min-height: 100%;
+
             letter-spacing: -0.2px;
           }
         `}

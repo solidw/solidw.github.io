@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import Link, { LinkProps } from "next/link";
 import { ReactNode } from "react";
 import { Button } from "./Button";
-import { neumorphismTheme, theme } from "#/styles/theme";
+import { neumorphismTheme } from "#/styles/theme";
 import { createNeumorphismBoxShadow, normalizeLink } from "#/styles/utils";
 
 Header.height = 80;
@@ -22,7 +22,7 @@ export function Header() {
         align-items: stretch;
         padding: 0px 30px;
 
-        background-color: ${neumorphismTheme.background};
+        background-color: ${neumorphismTheme.primary};
         box-shadow: ${createNeumorphismBoxShadow(5, 5)};
       `}
     >

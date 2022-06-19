@@ -43,7 +43,7 @@ export default function PostPage({
             margin-top: 40px;
           `}
         >
-          <MarkdownRenderer children={body} />
+          <MarkdownRenderer markdown={body} />
         </Stack.Vertical>
       </Article>
     </Page>
@@ -70,8 +70,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 
   const dir = path.join(process.cwd(), "posts");
-  const fileNameBase = params.fileName;
-  const fileName = `${dir}/${fileNameBase}.md`;
+  const fileName = `${dir}/${params.fileName}.md`;
 
   const content = fs.readFileSync(fileName, "utf8");
   const { attributes, body } = frontMatterParser<PostFrontMatters>(content);
@@ -86,7 +85,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: {
-      fileName: fileNameBase,
       attributes: safeAttributes,
       body,
     },
