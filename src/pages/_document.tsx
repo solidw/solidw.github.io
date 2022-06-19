@@ -5,6 +5,8 @@ import Document, {
   NextScript,
   DocumentContext,
 } from "next/document";
+import { Favicon } from "#/components/Favicon";
+import { GoogleAnalytics } from "#/components/GoogleAnalytics";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -16,20 +18,8 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head />
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-P1EMSKGQP3"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-
-              gtag('config', 'G-P1EMSKGQP3');`,
-          }}
-        />
+        <Favicon />
+        <GoogleAnalytics />
         <body>
           <Main />
           <NextScript />
