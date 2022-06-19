@@ -16,18 +16,8 @@ import { postUtils } from "#/utils/post";
 export default function PostsPage({ posts }: { posts: PostSummary[] }) {
   return (
     <Page title="포스트">
-      <Article
-        css={css`
-          padding: 0;
-        `}
-      >
-        <Title
-          css={css`
-            padding: 15px 30px;
-          `}
-        >
-          포스트
-        </Title>
+      <Article>
+        <Title>포스트</Title>
         <Hr />
         <ul
           css={css`
