@@ -1,10 +1,10 @@
-import { GetStaticProps } from "next";
+import { GetServerSideProps } from "next";
 
 export default function IndexPage() {
   return null;
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
       destination: "/posts",
