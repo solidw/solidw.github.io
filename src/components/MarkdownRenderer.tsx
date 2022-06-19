@@ -14,8 +14,8 @@ interface MarkdownRendererProps {
 export function MarkdownRenderer({ markdown }: MarkdownRendererProps) {
   const htmlText = remark()
     .use(remarkParse)
-    .use(remark2rehype)
-    .use(html)
+    .use(remark2rehype, { allowDangerousHtml: true })
+    .use(html, { allowDangerousHtml: true })
     .use(highlight, { prefix: "token " })
     .processSync(markdown)
     .toString();
