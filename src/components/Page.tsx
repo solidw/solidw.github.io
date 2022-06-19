@@ -12,7 +12,9 @@ export function Page({ title, children }: PageProps) {
   return (
     <>
       <Head>
-        <title>{title != null ? `${title} | ` : null}solidw.dev</title>
+        <title>
+          {title != null ? `${title} | ` : null}solidw.dev 고태완의 블로그
+        </title>
       </Head>
       <Header />
       <main>{children}</main>
