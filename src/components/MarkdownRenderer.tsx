@@ -30,6 +30,8 @@ export function MarkdownRenderer({ markdown }: MarkdownRendererProps) {
 
 const MarkdownRenderBlock = styled.div`
   line-height: 3rem;
+  word-break: break-all;
+
   blockquote {
     box-shadow: ${createNeumorphismBoxShadow(1, 2, { inset: true })};
     margin: 0;
