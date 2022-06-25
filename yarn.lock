@@ -419,6 +419,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@corex/deepmerge@npm:^4.0.26":
+  version: 4.0.26
+  resolution: "@corex/deepmerge@npm:4.0.26"
+  checksum: abbe0c87510873e7fd59a54d43256c73ed2ed04f2214f10c4f0e39beba1e75c3f6b480e9e53937cb4c4889447a0261de5fe823b6665436719c0eeb81c4bb4fbe
+  languageName: node
+  linkType: hard
+
 "@emotion/babel-plugin@npm:^11.7.1":
   version: 11.9.2
   resolution: "@emotion/babel-plugin@npm:11.9.2"
@@ -926,7 +933,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:12.1.6":
+"@next/env@npm:12.1.6, @next/env@npm:^12.1.6":
   version: 12.1.6
   resolution: "@next/env@npm:12.1.6"
   checksum: e6a4f189f0d653d13dc7ad510f6c9d2cf690bfd9e07c554bd501b840f8dabc3da5adcab874b0bc01aab86c3647cff4fb84692e3c3b28125af26f0b05cd4c7fcf
@@ -1803,6 +1810,7 @@ __metadata:
     "@emotion/css": ^11.9.0
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
+    "@next/env": ^12.1.6
     "@types/jest": ^28.1.3
     "@types/node": ^18.0.0
     "@types/react": ^18.0.14
@@ -1825,6 +1833,7 @@ __metadata:
     jest: ^28.1.1
     next: ^12.1.6
     next-seo: ^5.4.0
+    next-sitemap: ^3.1.6
     next-transpile-modules: ^9.0.0
     prettier: ^2.7.1
     react: ^18.2.0
@@ -5103,6 +5112,22 @@ __metadata:
     react: ">=16.0.0"
     react-dom: ">=16.0.0"
   checksum: fe19b4f7237111d6e8c2f3e9128946480f1b6e2d7ffab5902e8a4a1114721142daa187175334fa7d6da25605658e63cd8c6e3a68a9d9678fd7fbd4fb4b061391
+  languageName: node
+  linkType: hard
+
+"next-sitemap@npm:^3.1.6":
+  version: 3.1.6
+  resolution: "next-sitemap@npm:3.1.6"
+  dependencies:
+    "@corex/deepmerge": ^4.0.26
+    minimist: ^1.2.6
+  peerDependencies:
+    "@next/env": "*"
+    next: "*"
+  bin:
+    next-sitemap: bin/next-sitemap.mjs
+    next-sitemap-cjs: bin/next-sitemap.cjs
+  checksum: cdaf3e5e4ff8de985ce09835719dc3fc82163c65fde0b30418230735ba99bf556683469437a1215058c36f2f2b45dd3b26341e9c89553e29100d910fdf1dcf16
   languageName: node
   linkType: hard
 
