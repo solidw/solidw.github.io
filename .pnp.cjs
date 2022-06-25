@@ -894,7 +894,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/runtime", "npm:7.17.2"],\
             ["@emotion/hash", "npm:0.8.0"],\
             ["@emotion/memoize", "npm:0.7.5"],\
-            ["@emotion/serialize", "npm:1.0.2"],\
+            ["@emotion/serialize", "npm:1.0.3"],\
             ["@types/babel__core", null],\
             ["babel-plugin-macros", "npm:2.8.0"],\
             ["convert-source-map", "npm:1.8.0"],\
@@ -1013,18 +1013,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@emotion/serialize", [\
-        ["npm:1.0.2", {\
-          "packageLocation": "./.yarn/cache/@emotion-serialize-npm-1.0.2-a692afdb82-ff84fbe09e.zip/node_modules/@emotion/serialize/",\
-          "packageDependencies": [\
-            ["@emotion/serialize", "npm:1.0.2"],\
-            ["@emotion/hash", "npm:0.8.0"],\
-            ["@emotion/memoize", "npm:0.7.5"],\
-            ["@emotion/unitless", "npm:0.7.5"],\
-            ["@emotion/utils", "npm:1.1.0"],\
-            ["csstype", "npm:3.0.3"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:1.0.3", {\
           "packageLocation": "./.yarn/cache/@emotion-serialize-npm-1.0.3-2a28e46c06-99a9053bd9.zip/node_modules/@emotion/serialize/",\
           "packageDependencies": [\
@@ -1064,7 +1052,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/babel-plugin", "virtual:5ac32922c52f9f7c3321e892b85e1eb7789ba1c07597026b09fd9c69c64088083039b89660fd8c22e9632478435ea4fdb0c5859caf1c56ab94c09d2f0bf4e4bd#npm:11.7.2"],\
             ["@emotion/is-prop-valid", "npm:1.1.2"],\
             ["@emotion/react", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:11.9.0"],\
-            ["@emotion/serialize", "npm:1.0.2"],\
+            ["@emotion/serialize", "npm:1.0.3"],\
             ["@emotion/utils", "npm:1.1.0"],\
             ["@types/babel__core", null],\
             ["@types/emotion__react", null],\
