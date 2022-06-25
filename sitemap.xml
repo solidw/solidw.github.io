@@ -1,21 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+>
+  <url>
+    <loc>https://solidw.github.io/</loc>
+    <lastmod>2022-06-25T12:26:19.956Z</lastmod>
+  </url>
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
-    >
-      
-    <url>
-            <loc>https://solidw.github.io/</loc>
-            <lastmod>2022-06-25T12:16:22.354Z</lastmod>
-          </url><url>
-            <loc>https://solidw.github.io/me</loc>
-            <lastmod>2022-06-25T12:16:22.354Z</lastmod>
-          </url><url>
-            <loc>https://solidw.github.io/posts</loc>
-            <lastmod>2022-06-25T12:16:22.354Z</lastmod>
-          </url>
-  
-    </urlset>
-  
+  <url>
+    <loc>https://solidw.github.io/me</loc>
+    <lastmod>2022-06-25T12:26:19.956Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://solidw.github.io/posts</loc>
+    <lastmod>2022-06-25T12:26:19.956Z</lastmod>
+  </url>
+</urlset>
