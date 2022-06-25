@@ -17,8 +17,8 @@ export default function PostsPage({ posts }: { posts: PostRenderMeatData[] }) {
   return (
     <Page title="포스트">
       <SEO title="포스트" description="포스팅" canonical={`/posts`} />
-      <Article>
-        <Title>포스트</Title>
+      <Article css={{ padding: 0 }}>
+        <Title css={{ padding: "10px 30px" }}>포스트</Title>
         <Hr />
         <ul
           css={css`
@@ -26,6 +26,7 @@ export default function PostsPage({ posts }: { posts: PostRenderMeatData[] }) {
             flex-direction: column;
             margin: 0;
             padding: 0;
+            padding: "0px 30px";
           `}
         >
           {posts.map((post, index) => (
