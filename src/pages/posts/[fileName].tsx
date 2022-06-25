@@ -1,7 +1,6 @@
 import fs from "fs";
 import path from "path";
 import { css } from "@emotion/react";
-import frontMatterParser from "front-matter";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { Article } from "#/components/Article";
 import { Hr } from "#/components/Hr";
@@ -9,7 +8,7 @@ import { MarkdownRenderer } from "#/components/MarkdownRenderer";
 import { Page } from "#/components/Page";
 import { Stack } from "#/components/Stack";
 import { Title } from "#/components/Title";
-import { PostAttributes, PostFrontMatters } from "#/types/Post";
+import { PostRenderMeatData } from "#/types/Post";
 import { dateUtils } from "#/utils/date";
 import { postUtils } from "#/utils/post";
 
@@ -17,7 +16,7 @@ export default function PostPage({
   attributes,
   body,
 }: {
-  attributes: PostAttributes;
+  attributes: PostRenderMeatData;
   body: string;
 }) {
   return (
@@ -69,11 +68,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const fileName = `${dir}/${params.fileName}.md`;
 
   const content = fs.readFileSync(fileName, "utf8");
-  const { attributes, body } = frontMatterParser<PostFrontMatters>(content);
-
-  if (attributes.title == null) {
-    throw new Error("title은 반드시 입력해야 합니다.");
-  }
+  const { attributes, body } = postUtils.parseFrontMatter(content);
 
   const safeAttributes = postUtils.safeParseAttributes(attributes, {
     date: dateUtils.formatDate(fs.statSync(fileName).birthtime),

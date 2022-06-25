@@ -8,10 +8,10 @@ import {
   defualtTransition,
   normalizeLink,
 } from "#/styles/utils";
-import { PostSummary } from "#/types/Post";
+import { PostRenderMeatData } from "#/types/Post";
 import { dateUtils } from "#/utils/date";
 
-export function PostCard({ post }: { post: PostSummary }) {
+export function PostCard({ post }: { post: PostRenderMeatData }) {
   return (
     <Link href={`/posts/${post.path}`} passHref={true}>
       <a css={normalizeLink}>

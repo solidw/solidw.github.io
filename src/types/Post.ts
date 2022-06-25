@@ -1,14 +1,13 @@
-export interface PostAttributes {
+import { AnyObject } from ".";
+
+export interface PostAttributes extends AnyObject {
   title: string;
-  description: string;
-  draft: boolean;
-  date: string;
+  description?: string;
+  to?: string;
+  draft?: boolean;
+  date?: string;
 }
 
-export interface PostFrontMatters extends Partial<PostAttributes> {
-  title: PostAttributes["title"];
-}
-
-export interface PostSummary extends Omit<PostAttributes, "draft"> {
+export interface PostRenderMeatData extends Required<PostAttributes> {
   path: string;
 }
