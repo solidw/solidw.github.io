@@ -47,7 +47,7 @@ const MarkdownRenderBlock = styled.div`
     padding: 5px;
     margin-left: 3px;
     margin-right: 3px;
-    color: ${theme.palette.primary.dark};
+    color: ${theme.palette.secondary.dark};
   }
 
   :not(pre) > code[class*="language-"],
