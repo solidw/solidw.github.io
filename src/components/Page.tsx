@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { HTMLAttributes, ReactNode } from "react";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
