@@ -13,7 +13,7 @@ export function Page({ title, children }: PageProps) {
     <>
       <Head>
         <title>
-          {title != null ? `${title} | ` : null}solidw.dev 고태완의 블로그
+          {`${title != null ? `${title} | ` : ""}solidw.dev 고태완의 블로그`}
         </title>
       </Head>
       <Header />
