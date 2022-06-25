@@ -36,7 +36,7 @@ export function Header() {
               font-weight: bold;
             `}
           >
-            solidw.dev
+            solidw
           </ALink>
         </Li>
       </Ul>
