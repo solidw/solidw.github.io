@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://solidw.github.io
+
+# Sitemaps
+Sitemap: https://solidw.github.io/sitemap.xml
