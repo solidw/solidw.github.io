@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import rehypeExternalLinks from "rehype-external-links";
 import rehypePrism from "rehype-prism-plus";
 import rehypeStringify from "rehype-stringify/lib";
 import { remark } from "remark";
@@ -16,6 +17,10 @@ export function MarkdownRenderer({ markdown }: MarkdownRendererProps) {
     .use(remarkParse)
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeStringify, { allowDangerousHtml: true })
+    .use(rehypeExternalLinks, {
+      target: "_blank",
+      rel: ["noopener", "noreferrer"],
+    })
     .use(rehypePrism)
     .processSync(markdown)
     .toString();

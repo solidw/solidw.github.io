@@ -61,6 +61,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:18.2.0"],\
             ["rehype", "npm:12.0.1"],\
+            ["rehype-external-links", "npm:1.0.1"],\
             ["rehype-prism-plus", "npm:1.4.1"],\
             ["rehype-stringify", "npm:9.0.3"],\
             ["remark", "npm:14.0.2"],\
@@ -2657,6 +2658,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:18.2.0"],\
             ["rehype", "npm:12.0.1"],\
+            ["rehype-external-links", "npm:1.0.1"],\
             ["rehype-prism-plus", "npm:1.4.1"],\
             ["rehype-stringify", "npm:9.0.3"],\
             ["remark", "npm:14.0.2"],\
@@ -4728,6 +4730,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/ip-npm-1.1.8-abea558b72-a2ade53eb3.zip/node_modules/ip/",\
           "packageDependencies": [\
             ["ip", "npm:1.1.8"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["is-absolute-url", [\
+        ["npm:4.0.1", {\
+          "packageLocation": "./.yarn/cache/is-absolute-url-npm-4.0.1-e2251049d8-de172a7184.zip/node_modules/is-absolute-url/",\
+          "packageDependencies": [\
+            ["is-absolute-url", "npm:4.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -7253,6 +7264,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rehype-parse", "npm:8.0.4"],\
             ["rehype-stringify", "npm:9.0.3"],\
             ["unified", "npm:10.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["rehype-external-links", [\
+        ["npm:1.0.1", {\
+          "packageLocation": "./.yarn/cache/rehype-external-links-npm-1.0.1-d1b37a2e70-db83671c3c.zip/node_modules/rehype-external-links/",\
+          "packageDependencies": [\
+            ["rehype-external-links", "npm:1.0.1"],\
+            ["@types/hast", "npm:2.3.4"],\
+            ["extend", "npm:3.0.2"],\
+            ["is-absolute-url", "npm:4.0.1"],\
+            ["space-separated-tokens", "npm:2.0.1"],\
+            ["unified", "npm:10.1.2"],\
+            ["unist-util-visit", "npm:4.1.0"]\
           ],\
           "linkType": "HARD"\
         }]\
