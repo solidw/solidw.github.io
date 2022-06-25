@@ -17,6 +17,7 @@ jobs:
         with:
           node-version: 16
       - run: npm install
+      - run: npm run sitemap
       - run: npm run build
       - run: npm run export
         env:

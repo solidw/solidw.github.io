@@ -9,7 +9,8 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "lib": ["dom", "es2017"],
-    "module": "esnext",
+    "target": "ESNext",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "noEmit": true,
     "noFallthroughCasesInSwitch": true,
@@ -18,7 +19,6 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "esnext",
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
@@ -29,5 +29,5 @@
     "jsxImportSource": "@emotion/react"
   },
   "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts", "next.config.js"],
-  "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts", ".next", ".out"]
+  "exclude": ["**/*.spec.ts", "**/*.test.ts", ".next", ".out", "./scripts/*"]
 }
