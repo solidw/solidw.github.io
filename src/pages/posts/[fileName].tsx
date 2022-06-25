@@ -20,7 +20,7 @@ export default function PostPage({
   body: string;
 }) {
   return (
-    <Page title={attributes.title}>
+    <Page title={attributes.title} description={attributes.description}>
       <Article>
         <Title
           css={css`
