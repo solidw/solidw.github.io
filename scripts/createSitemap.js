@@ -1,10 +1,12 @@
 const { writeFileSync } = require("fs");
 const path = require("path");
 const globby = require("globby");
+const prettier = require("prettier");
 
 const getDate = new Date().toISOString();
 
 const DOMAIN = "https://solidw.github.io";
+const formatted = (sitemap) => prettier.format(sitemap, { parser: "html" });
 
 (async () => {
   const pages = await globby([
@@ -16,7 +18,7 @@ const DOMAIN = "https://solidw.github.io";
     `!${"./src/pages/**/[*.tsx"}`,
     `!${"./src/pages/[*.tsx"}`,
   ]);
-  console.log(pages);
+
   const pagesSitemap = `
     ${pages
       .map((page) => {
@@ -25,13 +27,14 @@ const DOMAIN = "https://solidw.github.io";
           .replace("./src/pages/", "")
           .replace(".tsx", "")
           .replace(/\/index/g, "");
+
         const routePath = path === "index" ? "" : path;
         return `
           <url>
             <loc>${DOMAIN}/${routePath}</loc>
             <lastmod>${getDate}</lastmod>
           </url>
-        `.trim();
+        `;
       })
       .join("")}
   `;
@@ -49,10 +52,7 @@ const DOMAIN = "https://solidw.github.io";
 
   writeFileSync(
     path.join(process.cwd(), "./public/sitemap.xml"),
-    generatedSitemap,
-    {
-      encoding: "utf-8",
-      flag: "w",
-    }
+    formatted(generatedSitemap),
+    "utf-8"
   );
 })();
