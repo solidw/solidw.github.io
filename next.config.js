@@ -3,6 +3,6 @@ const withTM = require("next-transpile-modules")([]);
 
 module.exports = withTM({
   experimental: {
-    esmExternals: "loose",
+    esmExternals: true,
   },
 });
