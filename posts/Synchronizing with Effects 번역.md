@@ -1,7 +1,7 @@
 ---
 title: "Synchronizing with Effects 번역"
 to: "React의 useEffect의 철학이 궁금한 사람"
-description: "React 18에서는 개발 환경에서 useEffect가 2번씩 호출된다는데,, 대체 왜?"
+description: "React 18에서는 개발 환경에서 useEffect를 일부러 2번 호출한다는데,, 대체 왜?"
 date: "2022-06-25"
 ---
 

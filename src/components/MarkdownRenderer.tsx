@@ -50,7 +50,6 @@ const MarkdownRenderBlock = styled.div`
 
   :not(pre) > code[class*="language-"],
   pre {
-    background: ${theme.palette.primary.light};
     box-shadow: ${createNeumorphismBoxShadow(3, 5, { inset: true })};
     border: none;
     padding: 15px;
