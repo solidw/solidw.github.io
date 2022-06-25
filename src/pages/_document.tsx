@@ -18,6 +18,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head />
+        <meta name="theme-color" content="#d6d7ff" />
         <Favicon />
         <GoogleAnalytics />
         <body>

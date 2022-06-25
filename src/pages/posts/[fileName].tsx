@@ -6,6 +6,7 @@ import { Article } from "#/components/Article";
 import { Hr } from "#/components/Hr";
 import { MarkdownRenderer } from "#/components/MarkdownRenderer";
 import { Page } from "#/components/Page";
+import { SEO } from "#/components/SEO";
 import { Stack } from "#/components/Stack";
 import { Title } from "#/components/Title";
 import { PostRenderMeatData } from "#/types/Post";
@@ -20,7 +21,12 @@ export default function PostPage({
   body: string;
 }) {
   return (
-    <Page title={attributes.title} description={attributes.description}>
+    <Page>
+      <SEO
+        title={attributes.title}
+        description={attributes.description}
+        canonical={`/posts/${encodeURIComponent(attributes.title)}`}
+      />
       <Article>
         <Title
           css={css`
@@ -37,7 +43,7 @@ export default function PostPage({
           {dateUtils.formatDateToShow(attributes.date)}
         </span>
         <Hr />
-        <Stack.Vertical>
+        <Stack.Vertical align="stretch">
           <MarkdownRenderer markdown={body} />
         </Stack.Vertical>
       </Article>

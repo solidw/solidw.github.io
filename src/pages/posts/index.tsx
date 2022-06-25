@@ -7,6 +7,7 @@ import { Article } from "#/components/Article";
 import { Hr } from "#/components/Hr";
 import { Page } from "#/components/Page";
 import { PostCard } from "#/components/PostCard";
+import { SEO } from "#/components/SEO";
 import { Title } from "#/components/Title";
 import { PostRenderMeatData } from "#/types/Post";
 import { dateUtils } from "#/utils/date";
@@ -15,6 +16,7 @@ import { postUtils } from "#/utils/post";
 export default function PostsPage({ posts }: { posts: PostRenderMeatData[] }) {
   return (
     <Page title="포스트">
+      <SEO title="포스트" description="포스팅" canonical={`/posts`} />
       <Article>
         <Title>포스트</Title>
         <Hr />
