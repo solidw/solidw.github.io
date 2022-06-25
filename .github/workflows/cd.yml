@@ -21,13 +21,13 @@ jobs:
       - run: npm run export
         env:
           CI: true
-          DEPLOY_TARGET: main
+          DEPLOY_TARGET: gh-pages
       - run: touch out/.nojekyll
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: main # 배포될 브랜치
+          BRANCH: gh-pages # 배포될 브랜치
           FOLDER: out # 이 폴더에 있는 파일을 배포
           CLEAN: true # 배포 브랜치에 있는 파일들을 자동으로 삭제
