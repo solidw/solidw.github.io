@@ -1,8 +1,5 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const withTM = require("next-transpile-modules")([]);
-
-module.exports = withTM({
+export const config = {
   experimental: {
     esmExternals: true,
   },
-});
+};
