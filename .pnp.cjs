@@ -64,7 +64,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rehype-prism-plus", "npm:1.4.1"],\
             ["rehype-stringify", "npm:9.0.3"],\
             ["remark", "npm:14.0.2"],\
-            ["remark-parse", "npm:9.0.0"],\
+            ["remark-parse", "npm:10.0.1"],\
             ["remark-rehype", "npm:10.1.0"],\
             ["supports-color", "npm:9.2.2"],\
             ["ts-jest", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:28.0.5"],\
@@ -2660,7 +2660,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rehype-prism-plus", "npm:1.4.1"],\
             ["rehype-stringify", "npm:9.0.3"],\
             ["remark", "npm:14.0.2"],\
-            ["remark-parse", "npm:9.0.0"],\
+            ["remark-parse", "npm:10.0.1"],\
             ["remark-rehype", "npm:10.1.0"],\
             ["supports-color", "npm:9.2.2"],\
             ["ts-jest", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:28.0.5"],\
@@ -5973,18 +5973,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["mdast-util-from-markdown", [\
-        ["npm:0.8.5", {\
-          "packageLocation": "./.yarn/cache/mdast-util-from-markdown-npm-0.8.5-0b8b6dc7ba-5a9d0d753a.zip/node_modules/mdast-util-from-markdown/",\
-          "packageDependencies": [\
-            ["mdast-util-from-markdown", "npm:0.8.5"],\
-            ["@types/mdast", "npm:3.0.10"],\
-            ["mdast-util-to-string", "npm:2.0.0"],\
-            ["micromark", "npm:2.11.4"],\
-            ["parse-entities", "npm:2.0.0"],\
-            ["unist-util-stringify-position", "npm:2.0.3"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:1.2.0", {\
           "packageLocation": "./.yarn/cache/mdast-util-from-markdown-npm-1.2.0-0e8d4c3b86-fadc3521a3.zip/node_modules/mdast-util-from-markdown/",\
           "packageDependencies": [\
@@ -6041,13 +6029,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["mdast-util-to-string", [\
-        ["npm:2.0.0", {\
-          "packageLocation": "./.yarn/cache/mdast-util-to-string-npm-2.0.0-3a5d9c4970-0b2113ada1.zip/node_modules/mdast-util-to-string/",\
-          "packageDependencies": [\
-            ["mdast-util-to-string", "npm:2.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:3.1.0", {\
           "packageLocation": "./.yarn/cache/mdast-util-to-string-npm-3.1.0-d888f00663-f42ddd4e22.zip/node_modules/mdast-util-to-string/",\
           "packageDependencies": [\
@@ -6084,15 +6065,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["micromark", [\
-        ["npm:2.11.4", {\
-          "packageLocation": "./.yarn/cache/micromark-npm-2.11.4-f7ec94840a-f8a5477d39.zip/node_modules/micromark/",\
-          "packageDependencies": [\
-            ["micromark", "npm:2.11.4"],\
-            ["debug", "virtual:1f3c51be25fef20e854261431be23d317093b3b463e81e911f4f45a636ff582620db066c9d2a5922a428e07e10fe4788eee8196c796ce2c9bd49d22743fec207#npm:4.3.4"],\
-            ["parse-entities", "npm:2.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:3.0.10", {\
           "packageLocation": "./.yarn/cache/micromark-npm-3.0.10-8d661b8a4a-04663fe030.zip/node_modules/micromark/",\
           "packageDependencies": [\
@@ -7379,14 +7351,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["unist-util-remove-position", "npm:2.0.1"],\
             ["vfile-location", "npm:3.2.0"],\
             ["xtend", "npm:4.0.2"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:9.0.0", {\
-          "packageLocation": "./.yarn/cache/remark-parse-npm-9.0.0-da1fe74019-5010488054.zip/node_modules/remark-parse/",\
-          "packageDependencies": [\
-            ["remark-parse", "npm:9.0.0"],\
-            ["mdast-util-from-markdown", "npm:0.8.5"]\
           ],\
           "linkType": "HARD"\
         }]\
