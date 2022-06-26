@@ -2,7 +2,6 @@ import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import Link from "next/link";
 import { Badge } from "./Badge";
-import { Flex } from "./Flex";
 import { Pre } from "./Pre";
 import { neumorphismTheme } from "#/styles/theme";
 import {
