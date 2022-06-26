@@ -16,12 +16,11 @@ function MyApp({ Component, pageProps }: AppProps) {
             ${setup}
             * {
               box-sizing: border-box;
-              white-space: normal;
+              word-break: break-all;
             }
             html {
               color: ${neumorphismTheme.primaryText};
               background-color: ${neumorphismTheme.primary};
-              min-height: 100%;
 
               letter-spacing: -0.2px;
             }

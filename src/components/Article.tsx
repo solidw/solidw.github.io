@@ -8,7 +8,6 @@ export function Article({ children, ...props }: ArticleProps) {
   return (
     <article
       css={css`
-        max-width: 900px;
         display: flex;
         flex-direction: column;
         margin: 0 auto;

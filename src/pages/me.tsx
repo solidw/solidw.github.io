@@ -2,6 +2,7 @@ import { readFileSync } from "fs";
 import path from "path";
 import { GetStaticProps } from "next";
 import { Article } from "#/components/Article";
+import { Container } from "#/components/Container";
 import { MarkdownRenderer } from "#/components/MarkdownRenderer";
 import { Page } from "#/components/Page";
 import { Section } from "#/components/Section";
@@ -9,11 +10,13 @@ import { Section } from "#/components/Section";
 export default function MePage({ body }: { body: string }) {
   return (
     <Page title="solidw">
-      <Article>
-        <Section>
-          <MarkdownRenderer markdown={body} />
-        </Section>
-      </Article>
+      <Container>
+        <Article>
+          <Section>
+            <MarkdownRenderer markdown={body} />
+          </Section>
+        </Article>
+      </Container>
     </Page>
   );
 }

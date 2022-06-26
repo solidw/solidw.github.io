@@ -4,6 +4,7 @@ import { css } from "@emotion/react";
 import { GetStaticProps } from "next";
 import { Fragment } from "react";
 import { Article } from "#/components/Article";
+import { Container } from "#/components/Container";
 import { Hr } from "#/components/Hr";
 import { Page } from "#/components/Page";
 import { PostCard } from "#/components/PostCard";
@@ -17,26 +18,28 @@ export default function PostsPage({ posts }: { posts: PostRenderMeatData[] }) {
   return (
     <Page title="포스트">
       <SEO title="포스트" description="포스팅" canonical={`/posts`} />
-      <Article css={{ padding: 0 }}>
-        <Title css={{ padding: "10px 30px" }}>포스트</Title>
-        <Hr />
-        <ul
-          css={css`
-            display: flex;
-            flex-direction: column;
-            margin: 0;
-            padding: 0;
-            padding: "0px 30px";
-          `}
-        >
-          {posts.map((post, index) => (
-            <Fragment key={post.path}>
-              <PostCard key={post.path} post={post} />
-              {index !== posts.length - 1 && <Hr />}
-            </Fragment>
-          ))}
-        </ul>
-      </Article>
+      <Container>
+        <Article css={{ padding: 0 }}>
+          <Title css={{ padding: 20 }}>포스트</Title>
+          <Hr />
+          <ul
+            css={css`
+              display: flex;
+              flex-direction: column;
+              margin: 0;
+              padding: 0;
+              padding: "0px 30px";
+            `}
+          >
+            {posts.map((post, index) => (
+              <Fragment key={post.path}>
+                <PostCard key={post.path} post={post} />
+                {index !== posts.length - 1 && <Hr />}
+              </Fragment>
+            ))}
+          </ul>
+        </Article>
+      </Container>
     </Page>
   );
 }

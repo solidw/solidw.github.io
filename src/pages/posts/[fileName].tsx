@@ -3,6 +3,7 @@ import path from "path";
 import { css } from "@emotion/react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { Article } from "#/components/Article";
+import { Container } from "#/components/Container";
 import { Hr } from "#/components/Hr";
 import { MarkdownRenderer } from "#/components/MarkdownRenderer";
 import { Page } from "#/components/Page";
@@ -27,26 +28,28 @@ export default function PostPage({
         description={attributes.description}
         canonical={`/posts/${encodeURIComponent(attributes.title)}`}
       />
-      <Article>
-        <Title
-          css={css`
-            margin-bottom: 10px;
-          `}
-        >
-          {attributes.title}
-        </Title>
-        <span
-          css={css`
-            margin-bottom: 10px;
-          `}
-        >
-          {dateUtils.formatDateToShow(attributes.date)}
-        </span>
-        <Hr />
-        <Stack.Vertical align="stretch">
-          <MarkdownRenderer markdown={body} />
-        </Stack.Vertical>
-      </Article>
+      <Container>
+        <Article>
+          <Title
+            css={css`
+              margin-bottom: 10px;
+            `}
+          >
+            {attributes.title}
+          </Title>
+          <span
+            css={css`
+              margin-bottom: 10px;
+            `}
+          >
+            {dateUtils.formatDateToShow(attributes.date)}
+          </span>
+          <Hr />
+          <Stack.Vertical align="stretch">
+            <MarkdownRenderer markdown={body} />
+          </Stack.Vertical>
+        </Article>
+      </Container>
     </Page>
   );
 }
