@@ -2,7 +2,7 @@ import { DefaultSeo, DefaultSeoProps } from "next-seo";
 
 const DEFAULT_SEO: DefaultSeoProps = {
   title: "solidw의 블로그",
-  description: "FE 개발을 기록해요.",
+  description: "고태완의 도서관",
   canonical: "https://solidw.github.io",
   openGraph: {
     type: "website",
@@ -10,7 +10,7 @@ const DEFAULT_SEO: DefaultSeoProps = {
     url: "https://solidw.github.io",
     title: "solidw의 블로그",
     site_name: "solidw의 블로그",
-    description: "FE 개발을 기록해요.",
+    description: "고태완의 도서관",
     images: [
       {
         url: "https://solidw.github.io/me.jpeg",
