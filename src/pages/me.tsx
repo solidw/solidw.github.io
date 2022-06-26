@@ -6,10 +6,12 @@ import { Container } from "#/components/Container";
 import { MarkdownRenderer } from "#/components/MarkdownRenderer";
 import { Page } from "#/components/Page";
 import { Section } from "#/components/Section";
+import { SEO } from "#/components/SEO";
 
 export default function MePage({ body }: { body: string }) {
   return (
-    <Page title="solidw">
+    <Page>
+      <SEO title="고태완 (solidw)" />
       <Container>
         <Article>
           <Section>
