@@ -19,6 +19,11 @@ class MyDocument extends Document {
       <Html>
         <Head />
         <meta name="theme-color" content="#d6d7ff" />
+        {/* 네이버 서치 콘솔 */}
+        <meta
+          name="naver-site-verification"
+          content="10cd16441bbd706012ce8f01d85b6b34a2c5dfce"
+        />
         <Favicon />
         <GoogleAnalytics />
         <body>
