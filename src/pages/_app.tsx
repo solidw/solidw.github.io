@@ -16,6 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             ${setup}
             * {
               box-sizing: border-box;
+              white-space: normal;
             }
             html {
               color: ${neumorphismTheme.primaryText};

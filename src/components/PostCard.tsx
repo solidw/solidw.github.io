@@ -18,15 +18,14 @@ export function PostCard({ post }: { post: PostRenderMeatData }) {
     <Link href={`/posts/${post.path}`} passHref={true}>
       <a css={normalizeLink}>
         <Card>
-          <Flex justify="space-between" align="center">
-            <h2>{post.title}</h2>
-            <span
-              css={css`
-                flex-basis: 30%;
-                font-size: 1.3rem;
-              `}
-            >{`to. ${post.to}`}</span>
-          </Flex>
+          <h2>{post.title}</h2>
+          <span
+            css={css`
+              flex-basis: 30%;
+              font-size: 1.3rem;
+            `}
+          >{`to. ${post.to}`}</span>
+
           <Pre
             css={css`
               font-size: 1.6rem;
