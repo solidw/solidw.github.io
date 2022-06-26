@@ -3,8 +3,10 @@ import { HTMLAttributes } from "react";
 import { neumorphismTheme } from "#/styles/theme";
 import { createNeumorphismBoxShadow, defualtTransition } from "#/styles/utils";
 
+type Variant = "primary" | "secondary";
+
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary";
+  variant?: Variant;
 }
 
 export function Button({
@@ -25,6 +27,7 @@ export function Button({
           ? neumorphismTheme.primaryText
           : neumorphismTheme.secondaryText};
         background: ${neumorphismTheme[variant]};
+
         box-shadow: ${createNeumorphismBoxShadow(5, 10)};
 
         &:hover {
