@@ -7,6 +7,7 @@ import Document, {
 } from "next/document";
 import { Favicon } from "#/components/Favicon";
 import { GoogleAnalytics } from "#/components/GoogleAnalytics";
+import { GoogleTagManager } from "#/components/GoogleTagManager";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -21,6 +22,7 @@ class MyDocument extends Document {
         <meta name="theme-color" content="#d6d7ff" />
         <Favicon />
         <GoogleAnalytics />
+        <GoogleTagManager />
         {/* 네이버 서치 콘솔 */}
         <meta
           name="naver-site-verification"
@@ -32,6 +34,7 @@ class MyDocument extends Document {
           content="rLTjyFm7D8DYd7KSU-QEXXEskWiK-7CxvagBJZkmDEY"
         />
         <body>
+          <GoogleTagManager.Body />
           <Main />
           <NextScript />
         </body>

@@ -8,11 +8,11 @@ export function GoogleAnalytics() {
       <script
         dangerouslySetInnerHTML={{
           __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-              gtag('config', 'G-P1EMSKGQP3');`,
+            gtag('config', 'G-P1EMSKGQP3');`,
         }}
       />
     </>
