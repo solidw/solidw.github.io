@@ -32,6 +32,13 @@ const MarkdownRenderBlock = styled.div`
   line-height: 3rem;
   word-break: break-all;
 
+  h1,
+  h2,
+  h3 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
   blockquote {
     box-shadow: ${createNeumorphismBoxShadow(1, 2, { inset: true })};
     margin: 0;
