@@ -14,10 +14,10 @@ import { PostRenderMeatData } from "#/types/Post";
 import { dateUtils } from "#/utils/date";
 import { postUtils } from "#/utils/post";
 
-export default function PostsPage({ posts }: { posts: PostRenderMeatData[] }) {
+export default function IndexPage({ posts }: { posts: PostRenderMeatData[] }) {
   return (
     <Page title="포스트">
-      <SEO title="포스트" description="포스팅" canonical={`/posts`} />
+      <SEO title="포스트" description="포스팅" canonical={`/`} />
       <Container>
         <Article css={{ padding: 0 }}>
           <Title css={{ padding: 20 }}>포스트</Title>
