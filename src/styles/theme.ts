@@ -68,9 +68,9 @@ export const theme: Theme = {
 export type Variant = "primary" | "secondary";
 
 export const neumorphismTheme = {
-  primary: "#d6d7ff",
-  primaryLightShadow: "#f6f7ff",
-  primaryDarkShadow: "#b6b7d9",
+  primary: "#e5e6ff",
+  primaryLightShadow: "#ffffff",
+  primaryDarkShadow: "#c3c4d9",
   primaryText: "#001f3f",
 
   secondary: "#6667AB",
