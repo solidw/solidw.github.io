@@ -4,9 +4,9 @@ import { createNeumorphismBoxShadow } from "#/styles/utils";
 
 interface ArticleProps extends HTMLAttributes<HTMLElement> {}
 
-export function Article({ children, ...props }: ArticleProps) {
+export function Block({ children, ...props }: ArticleProps) {
   return (
-    <article
+    <div
       css={css`
         display: flex;
         flex-direction: column;
@@ -19,6 +19,6 @@ export function Article({ children, ...props }: ArticleProps) {
       {...props}
     >
       {children}
-    </article>
+    </div>
   );
 }

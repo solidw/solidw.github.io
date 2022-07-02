@@ -1,7 +1,7 @@
 import { readFileSync } from "fs";
 import path from "path";
 import { GetStaticProps } from "next";
-import { Article } from "#/components/Article";
+import { Block } from "#/components/Block";
 import { Container } from "#/components/Container";
 import { MarkdownRenderer } from "#/components/MarkdownRenderer";
 import { Page } from "#/components/Page";
@@ -13,11 +13,11 @@ export default function MePage({ body }: { body: string }) {
     <Page>
       <SEO title="고태완 (solidw)" />
       <Container>
-        <Article>
+        <Block>
           <Section>
             <MarkdownRenderer markdown={body} />
           </Section>
-        </Article>
+        </Block>
       </Container>
     </Page>
   );

@@ -3,7 +3,7 @@ import path from "path";
 import { css } from "@emotion/react";
 import { GetStaticProps } from "next";
 import { Fragment } from "react";
-import { Article } from "#/components/Article";
+import { Block } from "#/components/Block";
 import { Container } from "#/components/Container";
 import { Hr } from "#/components/Hr";
 import { Page } from "#/components/Page";
@@ -19,10 +19,10 @@ export default function IndexPage({ posts }: { posts: PostRenderMeatData[] }) {
     <Page title="포스트">
       <SEO title="포스트" description="포스팅" canonical={`/`} />
       <Container>
-        <Article css={{ padding: 0 }}>
+        <Block css={{ padding: 0 }}>
           <Title css={{ padding: 20 }}>포스트</Title>
           <Hr />
-          <ul
+          <div
             css={css`
               display: flex;
               flex-direction: column;
@@ -37,8 +37,8 @@ export default function IndexPage({ posts }: { posts: PostRenderMeatData[] }) {
                 {index !== posts.length - 1 && <Hr />}
               </Fragment>
             ))}
-          </ul>
-        </Article>
+          </div>
+        </Block>
       </Container>
     </Page>
   );

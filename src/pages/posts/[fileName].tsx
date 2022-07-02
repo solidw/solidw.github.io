@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { css } from "@emotion/react";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { Article } from "#/components/Article";
+import { Block } from "#/components/Block";
 import { Container } from "#/components/Container";
 import { Hr } from "#/components/Hr";
 import { MarkdownRenderer } from "#/components/MarkdownRenderer";
@@ -29,7 +29,7 @@ export default function PostPage({
         canonical={`/posts/${encodeURIComponent(attributes.title)}`}
       />
       <Container>
-        <Article>
+        <Block>
           <Title
             css={css`
               margin-bottom: 10px;
@@ -48,7 +48,7 @@ export default function PostPage({
           <Stack.Vertical align="stretch">
             <MarkdownRenderer markdown={body} />
           </Stack.Vertical>
-        </Article>
+        </Block>
       </Container>
     </Page>
   );

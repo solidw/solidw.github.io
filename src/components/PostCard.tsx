@@ -4,47 +4,40 @@ import Link from "next/link";
 import { Badge } from "./Badge";
 import { Pre } from "./Pre";
 import { neumorphismTheme } from "#/styles/theme";
-import {
-  createNeumorphismBoxShadow,
-  defualtTransition,
-  normalizeLink,
-} from "#/styles/utils";
+import { createNeumorphismBoxShadow, defualtTransition } from "#/styles/utils";
 import { PostRenderMeatData } from "#/types/Post";
 import { dateUtils } from "#/utils/date";
 
 export function PostCard({ post }: { post: PostRenderMeatData }) {
   return (
     <Link href={`/posts/${post.path}`} passHref={true}>
-      <a css={normalizeLink}>
-        <Card>
-          <h2>{post.title}</h2>
-          <span
-            css={css`
-              flex-basis: 30%;
-              font-size: 1.3rem;
-            `}
-          >{`to. ${post.to}`}</span>
+      <Card role="link" css={{ cursor: "pointer" }} as="article">
+        <h2>{post.title}</h2>
+        <span
+          css={css`
+            flex-basis: 30%;
+            font-size: 1.3rem;
+          `}
+        >{`to. ${post.to}`}</span>
+        <Pre
+          css={css`
+            font-size: 1.6rem;
+            color: ${neumorphismTheme.primaryText};
 
-          <Pre
-            css={css`
-              font-size: 1.6rem;
-              color: ${neumorphismTheme.primaryText};
-
-              display: flex;
-              flex-direction: column;
-              justify-content: space-between;
-            `}
-          >
-            {post.description}
-          </Pre>
-          <Badge size="small">{dateUtils.formatDateToShow(post.date)}</Badge>
-        </Card>
-      </a>
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          `}
+        >
+          {post.description}
+        </Pre>
+        <Badge size="small">{dateUtils.formatDateToShow(post.date)}</Badge>
+      </Card>
     </Link>
   );
 }
 
-const Card = styled.li`
+const Card = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 4px;

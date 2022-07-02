@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { Article } from "#/components/Article";
+import { Block } from "#/components/Block";
 import { Button } from "#/components/Button";
 import { Container } from "#/components/Container";
 import { Page } from "#/components/Page";
@@ -14,7 +14,7 @@ export default function ErrorPage() {
     <Page>
       <SEO title="잘못된 경로예요.." />
       <Container>
-        <Article>
+        <Block>
           <Stack.Vertical align="stretch">
             <Title css={{ textAlign: "center" }}>잘못된 경로예요.</Title>
             <Button
@@ -24,7 +24,7 @@ export default function ErrorPage() {
               홈으로 돌아가기
             </Button>
           </Stack.Vertical>
-        </Article>
+        </Block>
       </Container>
     </Page>
   );
