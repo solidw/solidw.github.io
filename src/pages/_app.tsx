@@ -21,8 +21,6 @@ function MyApp({ Component, pageProps }: AppProps) {
             html {
               color: ${neumorphismTheme.primaryText};
               background-color: ${neumorphismTheme.primary};
-
-              letter-spacing: -0.2px;
             }
           `}
         />

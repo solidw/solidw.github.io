@@ -16,14 +16,15 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 16
-      - run: npm install
-      - run: npm run build
-      - run: npm run export
+      - run: yarn install
+      - run: yarn run build
+      - run: yarn run sitemap
+      - run: yarn run export
         env:
           CI: true
           DEPLOY_TARGET: gh-pages
       - run: touch out/.nojekyll
-
+      - run: node ./scripts/pingSitemap.mjs
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:

@@ -52,7 +52,7 @@ export function Header() {
           </ALink>
         </Li>
         <Li>
-          <ALink href="/posts" passHref={true}>
+          <ALink href="/" passHref={true}>
             <Button>POST</Button>
           </ALink>
         </Li>
