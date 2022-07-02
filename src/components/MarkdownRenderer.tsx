@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { s } from "hastscript";
+import { h, s } from "hastscript";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeExternalLinks from "rehype-external-links";
 import rehypePrism from "rehype-prism-plus";
@@ -8,7 +8,6 @@ import rehypeStringify from "rehype-stringify/lib";
 import { remark } from "remark";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
-import { Header } from "./Header";
 import { neumorphismTheme, theme } from "#/styles/theme";
 import { createNeumorphismBoxShadow } from "#/styles/utils";
 
@@ -39,8 +38,9 @@ export function MarkdownRenderer({ markdown }: MarkdownRendererProps) {
     .use(rehypeStringify, { allowDangerousHtml: true })
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings, {
-      properties: { class: "anchor" },
+      behavior: "append",
       content: AnchorContent,
+      properties: { class: "anchor" },
     })
     .use(rehypeExternalLinks, {
       target: "_blank",
@@ -59,9 +59,24 @@ const MarkdownRenderBlock = styled.div`
 
   h1,
   h2,
-  h3 {
+  h3,
+  h4,
+  h5,
+  h6 {
     margin-top: 40px;
     margin-bottom: 40px;
+
+    &:hover {
+      .anchor {
+        visibility: visible;
+      }
+    }
+  }
+
+  .anchor {
+    visibility: hidden;
+    margin-left: 5px;
+    vertical-align: middle;
   }
 
   blockquote {
@@ -87,19 +102,6 @@ const MarkdownRenderBlock = styled.div`
     box-shadow: ${createNeumorphismBoxShadow(3, 5, { inset: true })};
     border: none;
     padding: 15px;
-  }
-
-  a.anchor {
-    position: relative;
-    .autolink-svg {
-      position: absolute;
-
-      right: 0px;
-      /* visibility: hidden; */
-      &:hover {
-        visibility: visible;
-      }
-    }
   }
 
   // 여기 아래부터 커스텀(prism-themes)
