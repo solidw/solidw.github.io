@@ -56,10 +56,10 @@ export default function PostPage({
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const dir = path.join(process.cwd(), "posts");
-  const fileNames = fs.readdirSync(dir);
+  const folders = fs.readdirSync(dir);
 
-  const paths = fileNames.map((fileName) => ({
-    params: { fileName: postUtils.getFileNameBase(fileName) },
+  const paths = folders.map((folder) => ({
+    params: { path: postUtils.getFileNameBase(folder) },
   }));
 
   return {
@@ -69,12 +69,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  if (params?.fileName == null) {
-    throw new Error("fileName을 찾을 수 없습니다.");
+  if (params?.path == null) {
+    throw new Error("path를 찾을 수 없습니다.");
   }
 
   const dir = path.join(process.cwd(), "posts");
-  const fileName = `${dir}/${params.fileName}.md`;
+  const fileName = `${dir}/${params.path}/post.md`;
 
   const content = fs.readFileSync(fileName, "utf8");
   const { attributes, body } = postUtils.parseFrontMatter(content);

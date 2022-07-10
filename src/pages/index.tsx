@@ -48,12 +48,12 @@ export const getStaticProps: GetStaticProps<{
   posts: PostRenderMeatData[];
 }> = async () => {
   const dir = path.join(process.cwd(), "posts");
-  const fileNames = fs.readdirSync(dir);
+  const folders = fs.readdirSync(dir);
 
-  const posts = fileNames.reduce<PostRenderMeatData[]>((posts, fileName) => {
-    const path = `${dir}/${fileName}`;
-    const content = fs.readFileSync(path, "utf8");
-    const birthDate = dateUtils.formatDate(fs.statSync(path).birthtime);
+  const posts = folders.reduce<PostRenderMeatData[]>((posts, folder) => {
+    const postPath = `${dir}/${folder}/post.md`;
+    const content = fs.readFileSync(postPath, "utf8");
+    const birthDate = dateUtils.formatDate(fs.statSync(postPath).birthtime);
 
     const { attributes } = postUtils.parseFrontMatter(content);
     const safeAttributes = postUtils.safeParseAttributes(attributes, {
@@ -62,7 +62,7 @@ export const getStaticProps: GetStaticProps<{
 
     const post: PostRenderMeatData = {
       ...safeAttributes,
-      path: postUtils.getFileNameBase(fileName),
+      path: postUtils.getFileNameBase(folder),
     };
 
     posts.push(post);
