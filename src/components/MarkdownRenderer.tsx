@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { h, s } from "hastscript";
+import { s } from "hastscript";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeExternalLinks from "rehype-external-links";
 import rehypePrism from "rehype-prism-plus";
