@@ -8,6 +8,7 @@ import rehypeStringify from "rehype-stringify/lib";
 import { remark } from "remark";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
+import { Header } from "./Header";
 import { neumorphismTheme, theme } from "#/styles/theme";
 import { createNeumorphismBoxShadow } from "#/styles/utils";
 
@@ -65,6 +66,14 @@ const MarkdownRenderBlock = styled.div`
   h6 {
     margin-top: 40px;
     margin-bottom: 40px;
+
+    // sticky header에 링크가 가려지는 현상 방어 코드
+    &:before {
+      content: "";
+      display: block;
+      padding-top: ${Header.height + 10}px;
+      margin-top: -${Header.height + 10}px;
+    }
 
     &:hover {
       .anchor {
