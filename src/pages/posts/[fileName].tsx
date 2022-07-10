@@ -44,7 +44,7 @@ export default function PostPage({
           >
             {dateUtils.formatDateToShow(attributes.date)}
           </span>
-          <Hr />
+          <Hr css={{ marginBottom: 20 }} />
           <Stack.Vertical align="stretch">
             <MarkdownRenderer markdown={body} />
           </Stack.Vertical>
