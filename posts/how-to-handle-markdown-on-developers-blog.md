@@ -1,7 +1,7 @@
 ---
 title: "개발 블로그에서 마크다운을 다루는 방법"
 description: "개발 블로그에 기본이라고 할 수 있는 Markdown 파서와 Syntax highlight 삽질을 들여다보자"
-to: "블로그를 Next.js로 한땀 한땀 만들고 싶은 사람"
+to: "블로그를 Next.js로 한땀 한땀 만들고 싶은 사람에게"
 date: "2022-06-19"
 ---
 
