@@ -2,7 +2,6 @@
 title: 그로스 해킹 - Product Market Fit
 description: 그로스 해킹을 읽고 - PMF를 찾아서
 to: 제품을 잘 만들고 싶은 사람에게
-date: "2022-07-16"
 ---
 
 > [그로스 해킹 데이터와 실험을 통해 성장하는 서비스를 만드는 방법](http://www.yes24.com/Product/Goods/96576416)
