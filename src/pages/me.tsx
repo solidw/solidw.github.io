@@ -10,7 +10,7 @@ import { SEO } from "#/components/SEO";
 
 export default function MePage({ body }: { body: string }) {
   return (
-    <Page>
+    <Page css={{ marginTop: 20 }}>
       <SEO title="고태완 (solidw)" />
       <Container>
         <Block>

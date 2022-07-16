@@ -4,6 +4,8 @@ import { normalizeLink } from "#/styles/utils";
 
 const year = new Date().getFullYear();
 
+Footer.height = 80;
+
 export function Footer() {
   return (
     <footer
@@ -12,6 +14,7 @@ export function Footer() {
         padding: 30px;
         justify-content: center;
         white-space: pre;
+        height: ${Footer.height}px;
       `}
     >
       <span>Copyright {year}. </span>

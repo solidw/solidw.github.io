@@ -16,7 +16,7 @@ import { postUtils } from "#/utils/post";
 
 export default function IndexPage({ posts }: { posts: PostRenderMeatData[] }) {
   return (
-    <Page title="포스트">
+    <Page title="포스트" css={{ marginTop: 20 }}>
       <SEO title="포스트" description="포스팅" canonical={`/`} />
       <Container>
         <Block css={{ padding: 0 }}>

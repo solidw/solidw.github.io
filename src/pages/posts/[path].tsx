@@ -22,7 +22,7 @@ export default function PostPage({
   body: string;
 }) {
   return (
-    <Page>
+    <Page css={{ marginTop: 20 }}>
       <SEO
         title={attributes.title}
         description={attributes.description}
