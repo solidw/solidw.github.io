@@ -64,9 +64,6 @@ const MarkdownRenderBlock = styled.div`
   h4,
   h5,
   h6 {
-    margin-top: 40px;
-    margin-bottom: 40px;
-
     // sticky header에 링크가 가려지는 현상 방어 코드
     &:before {
       content: "";
@@ -80,6 +77,13 @@ const MarkdownRenderBlock = styled.div`
         visibility: visible;
       }
     }
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 
   .anchor {
