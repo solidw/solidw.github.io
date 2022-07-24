@@ -1,7 +1,8 @@
 ---
-title: 그로스 해킹 - AARRR - Acquisition
-description: 그로스 해킹을 읽고 - 유저 유치에는 트래킹이 핵심이다.
-to: 제품을 잘 만들고 싶은 사람에게
+title: "그로스 해킹 - AARRR - Acquisition"
+description: "그로스 해킹을 읽고 - 유저 유치에는 트래킹이 핵심이다."
+to: "제품을 잘 만들고 싶은 사람에게"
+timestamp: "2022-07-16T00:00:00.002Z"
 ---
 
 > [그로스 해킹 데이터와 실험을 통해 성장하는 서비스를 만드는 방법](http://www.yes24.com/Product/Goods/96576416)

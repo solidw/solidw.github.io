@@ -31,7 +31,7 @@ export function PostCard({ post }: { post: PostRenderMeatData }) {
         >
           {post.description}
         </Pre>
-        <Badge size="small">{dateUtils.formatDateToShow(post.date)}</Badge>
+        <Badge size="small">{dateUtils.formatDateToShow(post.timestamp)}</Badge>
       </Card>
     </Link>
   );

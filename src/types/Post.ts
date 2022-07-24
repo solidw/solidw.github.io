@@ -5,7 +5,7 @@ export interface PostAttributes extends AnyObject {
   description?: string;
   to?: string;
   draft?: boolean;
-  date?: string;
+  timestamp?: string;
 }
 
 export interface PostRenderMeatData extends Required<PostAttributes> {

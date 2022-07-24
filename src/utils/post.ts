@@ -30,7 +30,8 @@ export const postUtils = {
       title: postAttributes.title,
       description: fallbackPostAttributes.description ?? "",
       draft: fallbackPostAttributes.draft ?? false,
-      date: fallbackPostAttributes.date ?? dateUtils.formatDate(new Date()),
+      timestamp:
+        fallbackPostAttributes.timestamp ?? dateUtils.formatDate(new Date()),
       to: "누구나",
     };
 
@@ -38,7 +39,7 @@ export const postUtils = {
       title: postAttributes.title,
       description: postAttributes.description ?? defaultAttributes.description,
       draft: postAttributes.draft ?? defaultAttributes.draft,
-      date: postAttributes.date ?? defaultAttributes.date,
+      timestamp: postAttributes.timestamp ?? defaultAttributes.timestamp,
       to: postAttributes.to ?? defaultAttributes.to,
     };
   },

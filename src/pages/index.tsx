@@ -57,7 +57,7 @@ export const getStaticProps: GetStaticProps<{
 
     const { attributes } = postUtils.parseFrontMatter(content);
     const safeAttributes = postUtils.safeParseAttributes(attributes, {
-      date: birthDate,
+      timestamp: birthDate,
     });
 
     const post: PostRenderMeatData = {
@@ -69,7 +69,9 @@ export const getStaticProps: GetStaticProps<{
     return posts;
   }, []);
 
-  posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  posts.sort(
+    (a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
+  );
 
   return {
     props: {

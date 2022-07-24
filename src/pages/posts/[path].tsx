@@ -42,7 +42,7 @@ export default function PostPage({
               margin-bottom: 10px;
             `}
           >
-            {dateUtils.formatDateToShow(attributes.date)}
+            {dateUtils.formatDateToShow(attributes.timestamp)}
           </span>
           <Hr css={{ marginBottom: 20 }} />
           <Stack.Vertical align="stretch">
@@ -80,7 +80,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { attributes, body } = postUtils.parseFrontMatter(content);
 
   const safeAttributes = postUtils.safeParseAttributes(attributes, {
-    date: dateUtils.formatDate(fs.statSync(fileName).birthtime),
+    timestamp: dateUtils.formatDate(fs.statSync(fileName).birthtime),
   });
 
   return {
