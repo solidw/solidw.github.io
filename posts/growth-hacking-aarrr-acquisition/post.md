@@ -1,6 +1,6 @@
 ---
 title: "그로스 해킹 - AARRR - Acquisition"
-description: "그로스 해킹을 읽고 - 유저 유치에는 트래킹이 핵심이다."
+description: "그로스 해킹을 읽고 - 유저 유치에는 트래킹이 핵심"
 to: "제품을 잘 만들고 싶은 사람에게"
 timestamp: "2022-07-16T00:00:00.002Z"
 ---
