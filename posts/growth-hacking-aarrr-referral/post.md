@@ -1,6 +1,6 @@
 ---
 title: "그로스 해킹 - AARRR - Referral"
-description: "그로스 해킹을 읽고 - 친구 초대"
+description: "그로스 해킹을 읽고 - Referral의 복리 효과"
 to: "제품을 잘 만들고 싶은 사람에게"
 timestamp: "2022-07-24T12:05:32.044Z"
 ---
