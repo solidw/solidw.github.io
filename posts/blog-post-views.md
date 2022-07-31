@@ -16,7 +16,7 @@ timestamp: "2022-07-31T06:17:29.476Z"
 
 클라우드 중 가장 먼저 생각난 것은 대중적인 AWS EC2 인스턴스였다. AWS에 계정을 새로 만들면 1년간 월 750시간을 무료로 사용할 수 있는 EC2를 제공하지만 여러 가지 변수로 과금될 수 있고 1년 후에는 무료가 아니게 된다는 것이 걸렸다. 그 다음 눈을 돌린 것은 Heroku 였다. 한번도 사용해보지 않았지만 블로그에 적당한 스펙의 Dynos를 무료로 지원한다. 게다가 Postgresql 데이터베이스도 지원한다. 그래서 Heroku를 이용해 서버와 데이터베이스를 구현하기로 정했다.
 
-![Dynos](dynos.png)
+![Dynos](/posts/blog-post-views/dynos.png)
 
 > Dynos(Heroku에서의 isolated, virtualized linux container)
 
@@ -34,7 +34,7 @@ timestamp: "2022-07-31T06:17:29.476Z"
 
 우선 Views를 직관적으로 표현해줄 수 있는 png 파일을 하나 받아오고 count를 받아서 렌더하는 `ViewCount.tsx` 컴포넌트를 만들었다. 클라이언트에서 기능을 구현하는 것은 익숙하기 때문에 금방 만들었다. react-query를 이용해서 포스트 페이지에 접속하면 모든 포스트에 대한 views를 받아오고, 포스트 페이지에 접속하면 increment 요청을 보내도록 했다. 한가지 염려되는 점은 세션ID를 체크하지 않아서 한 페이지에서 새로고침을 마구마구 하면 views가 마구마구 올라간다. 지금은 큰 문제가 될 것 같지 않아서 추후에 추가할 계획이다.
 
-![ViewCount 컴포넌트](/posts/blog-views-count/view-count.png)
+![ViewCount 컴포넌트](/posts/blog-post-views/view-count.png)
 
 > 우측 하단의 컴포넌트
 
