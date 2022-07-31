@@ -1,6 +1,6 @@
 # solidw.github.io
 
-> 한땀 한땀 만드는 수제 블로그
+> 한 땀 한 땀 만드는 수제 블로그
 
 ## Features
 
@@ -8,6 +8,7 @@
 - Markdown -> HTML
   - Syntax Highlighting 지원
 - Neumorphism Design
+- [Server](https://github.com/solidw/solidw.github.io-server) 이용해서 View Count 기록
 
 ## Todo
 
