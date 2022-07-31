@@ -45,3 +45,7 @@ timestamp: "2022-07-31T06:17:29.476Z"
 ## 후기
 
 주말을 이용해서 간단한 기능을 구현했다. 서버 구현할 때 조금 헤맸지만 앞으로 서버가 필요한 기능이 추가된다면 금방 추가할 수 있을 것 같다. 그리고 NestJS의 온보딩 경험이 꽤 괜찮아서 조금 더 관심을 갖고 사용하려고 한다. 이제 포스트의 views를 측정할 수 있게 되었으니 다음에는 코멘트 기능을 추가해야겠다. 블로그와 함께 나도 성장해서 더 풍성한 블로그가 되었으면 좋겠다.
+
+## 참고한 포스트
+
+- [Connecting Heroku Postgres with NestJS Backend](https://dev.to/omercalik/connecting-heroku-postgres-with-nestjs-backend-3p1j)
