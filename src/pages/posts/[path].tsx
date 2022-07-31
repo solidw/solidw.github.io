@@ -9,7 +9,7 @@ import { Container } from "#/components/Container";
 import { Hr } from "#/components/Hr";
 import { MarkdownRenderer } from "#/components/MarkdownRenderer";
 import { Page } from "#/components/Page";
-import { SEO } from "#/components/SEO";
+import { getCanonicalAbsolutePath, SEO } from "#/components/SEO";
 import { Stack } from "#/components/Stack";
 import { Title } from "#/components/Title";
 import { useIncreasePostViews } from "#/hooks/useIncreasePostViews";
@@ -35,7 +35,7 @@ export default function PostPage({
       <SEO
         title={metadata.title}
         description={metadata.description}
-        canonical={metadata.path}
+        canonical={getCanonicalAbsolutePath(`/posts/${metadata.path}`)}
       />
       <Container>
         <Block>
