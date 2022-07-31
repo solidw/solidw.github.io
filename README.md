@@ -9,7 +9,7 @@
   - Syntax Highlighting 지원
 - Neumorphism Design
 - [Server](https://github.com/solidw/solidw.github.io-server) 이용해서 View Count 기록
-- 댓글 기능 (Utterance.es)
+- [Utterances](https://utteranc.es/)를 이용한 댓글 기능
 
 ## Todo
 
