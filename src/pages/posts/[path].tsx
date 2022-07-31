@@ -88,7 +88,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 
   const dir = path.join(process.cwd(), "posts");
-  const fileName = `${dir}/${params.path}/post.md`;
+  const fileName = `${dir}/${params.path}.md`;
 
   const content = fs.readFileSync(fileName, "utf8");
   const { attributes, body } = postUtils.parseFrontMatter(content);

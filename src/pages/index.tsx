@@ -54,11 +54,11 @@ export const getStaticProps: GetStaticProps<{
   posts: PostRenderMetadata[];
 }> = async () => {
   const dir = path.join(process.cwd(), "posts");
-  const folders = fs.readdirSync(dir);
+  const postFiles = fs.readdirSync(dir);
 
-  const posts = folders.reduce<PostRenderMetadata[]>((posts, folder) => {
-    const postPath = `${dir}/${folder}/post.md`;
-    const content = fs.readFileSync(postPath, "utf8");
+  const posts = postFiles.reduce<PostRenderMetadata[]>((posts, postFile) => {
+    const postPath = `${dir}/${postFile}`;
+    const content = fs.readFileSync(postPath, "utf-8");
 
     const { attributes } = postUtils.parseFrontMatter(content);
     const birthDate = dateUtils.formatDate(fs.statSync(postPath).birthtime);
@@ -69,7 +69,7 @@ export const getStaticProps: GetStaticProps<{
 
     const post: PostRenderMetadata = {
       ...safeAttributes,
-      path: postUtils.getFileNameBase(folder),
+      path: postUtils.getFileNameBase(postFile),
     };
 
     posts.push(post);
