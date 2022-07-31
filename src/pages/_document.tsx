@@ -1,9 +1,9 @@
 import Document, {
-  Html,
+  DocumentContext,
   Head,
+  Html,
   Main,
   NextScript,
-  DocumentContext,
 } from "next/document";
 import { ReactNode } from "react";
 import { Favicon } from "#/components/Favicon";
@@ -12,8 +12,9 @@ import { GoogleTagManager } from "#/components/GoogleTagManager";
 import { neumorphismTheme } from "#/styles/theme";
 
 function LiveOnly({ children }: { children: ReactNode }) {
-  const isDev = process.env.ENV === "dev";
-  if (isDev) {
+  const isLive = process.env.NODE_ENV === "production";
+
+  if (isLive) {
     return null;
   }
 
