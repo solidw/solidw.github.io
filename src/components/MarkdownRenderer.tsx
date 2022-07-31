@@ -58,6 +58,11 @@ const MarkdownRenderBlock = styled.div`
   line-height: 3rem;
   word-break: break-all;
 
+  img {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
   h1,
   h2,
   h3,
