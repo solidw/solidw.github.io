@@ -7,13 +7,13 @@ import { Pre } from "./Pre";
 import { ViewCount } from "./ViewCount";
 import { neumorphismTheme } from "#/styles/theme";
 import { createNeumorphismBoxShadow, defualtTransition } from "#/styles/utils";
-import { PostRenderMeatData } from "#/types/Post";
+import { PostRenderMetadata } from "#/types/Post";
 import { dateUtils } from "#/utils/date";
 
 export function PostCard({
   post,
 }: {
-  post: PostRenderMeatData & { views: number };
+  post: PostRenderMetadata & { views: number };
 }) {
   return (
     <Link href={`/posts/${post.path}`} passHref={true}>

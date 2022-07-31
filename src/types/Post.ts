@@ -7,7 +7,7 @@ export interface PostAttributes {
   timestamp?: string;
 }
 
-export interface PostRenderMeatData extends Required<PostAttributes> {
+export interface PostRenderMetadata extends Required<PostAttributes> {
   path: string;
 }
 

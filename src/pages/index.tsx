@@ -11,11 +11,11 @@ import { PostCard } from "#/components/PostCard";
 import { SEO } from "#/components/SEO";
 import { Title } from "#/components/Title";
 import { usePostsViews } from "#/hooks/usePostsViews";
-import { PostRenderMeatData } from "#/types/Post";
+import { PostRenderMetadata } from "#/types/Post";
 import { dateUtils } from "#/utils/date";
 import { postUtils } from "#/utils/post";
 
-export default function IndexPage({ posts }: { posts: PostRenderMeatData[] }) {
+export default function IndexPage({ posts }: { posts: PostRenderMetadata[] }) {
   const postViewsMap = usePostsViews();
 
   return (
@@ -51,12 +51,12 @@ export default function IndexPage({ posts }: { posts: PostRenderMeatData[] }) {
 }
 
 export const getStaticProps: GetStaticProps<{
-  posts: PostRenderMeatData[];
+  posts: PostRenderMetadata[];
 }> = async () => {
   const dir = path.join(process.cwd(), "posts");
   const folders = fs.readdirSync(dir);
 
-  const posts = folders.reduce<PostRenderMeatData[]>((posts, folder) => {
+  const posts = folders.reduce<PostRenderMetadata[]>((posts, folder) => {
     const postPath = `${dir}/${folder}/post.md`;
     const content = fs.readFileSync(postPath, "utf8");
 
@@ -67,7 +67,7 @@ export const getStaticProps: GetStaticProps<{
       timestamp: birthDate,
     });
 
-    const post: PostRenderMeatData = {
+    const post: PostRenderMetadata = {
       ...safeAttributes,
       path: postUtils.getFileNameBase(folder),
     };

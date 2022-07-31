@@ -5,6 +5,9 @@ import { PostAttributes } from "#/types/Post";
 function validatePostAttributes(
   postAttributes: Partial<PostAttributes>
 ): asserts postAttributes is PostAttributes {
+  if (postAttributes.id == null) {
+    throw new Error("id는 반드시 입력해야 합니다.");
+  }
   if (postAttributes.title == null) {
     throw new Error("title은 반드시 입력해야 합니다.");
   }

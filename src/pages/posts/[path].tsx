@@ -4,6 +4,7 @@ import { css } from "@emotion/react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { useEffect } from "react";
 import { Block } from "#/components/Block";
+import { Comments } from "#/components/Comments";
 import { Container } from "#/components/Container";
 import { Hr } from "#/components/Hr";
 import { MarkdownRenderer } from "#/components/MarkdownRenderer";
@@ -12,18 +13,18 @@ import { SEO } from "#/components/SEO";
 import { Stack } from "#/components/Stack";
 import { Title } from "#/components/Title";
 import { useIncreasePostViews } from "#/hooks/useIncreasePostViews";
-import { PostRenderMeatData } from "#/types/Post";
+import { PostRenderMetadata } from "#/types/Post";
 import { dateUtils } from "#/utils/date";
 import { postUtils } from "#/utils/post";
 
 export default function PostPage({
-  attributes,
+  metadata,
   body,
 }: {
-  attributes: PostRenderMeatData;
+  metadata: PostRenderMetadata;
   body: string;
 }) {
-  const { mutateAsync: increaseCount } = useIncreasePostViews(attributes.id);
+  const { mutateAsync: increaseCount } = useIncreasePostViews(metadata.id);
 
   useEffect(() => {
     increaseCount();
@@ -32,9 +33,9 @@ export default function PostPage({
   return (
     <Page css={{ marginTop: 20 }}>
       <SEO
-        title={attributes.title}
-        description={attributes.description}
-        canonical={`/posts/${encodeURIComponent(attributes.title)}`}
+        title={metadata.title}
+        description={metadata.description}
+        canonical={metadata.path}
       />
       <Container>
         <Block>
@@ -43,20 +44,21 @@ export default function PostPage({
               margin-bottom: 10px;
             `}
           >
-            {attributes.title}
+            {metadata.title}
           </Title>
           <span
             css={css`
               margin-bottom: 10px;
             `}
           >
-            {dateUtils.formatDateToShow(attributes.timestamp)}
+            {dateUtils.formatDateToShow(metadata.timestamp)}
           </span>
           <Hr css={{ marginBottom: 20 }} />
           <Stack.Vertical align="stretch">
             <MarkdownRenderer markdown={body} />
           </Stack.Vertical>
         </Block>
+        <Comments />
       </Container>
     </Page>
   );
@@ -81,6 +83,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     throw new Error("path를 찾을 수 없습니다.");
   }
 
+  if (typeof params.path === "object") {
+    throw new Error("path는 string이어야 합니다.");
+  }
+
   const dir = path.join(process.cwd(), "posts");
   const fileName = `${dir}/${params.path}/post.md`;
 
@@ -91,9 +97,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     timestamp: dateUtils.formatDate(fs.statSync(fileName).birthtime),
   });
 
+  const renderMetatData: PostRenderMetadata = {
+    ...safeAttributes,
+    path: params.path,
+  };
+
   return {
     props: {
-      attributes: safeAttributes,
+      metadata: renderMetatData,
       body,
     },
   };
