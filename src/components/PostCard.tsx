@@ -1,7 +1,6 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import Link from "next/link";
-import { Suspense } from "react";
 import { Badge } from "./Badge";
 import { Flex } from "./Flex";
 import { Pre } from "./Pre";
