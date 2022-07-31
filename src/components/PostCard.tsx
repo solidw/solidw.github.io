@@ -1,14 +1,21 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import Link from "next/link";
+import { Suspense } from "react";
 import { Badge } from "./Badge";
+import { Flex } from "./Flex";
 import { Pre } from "./Pre";
+import { ViewCount } from "./ViewCount";
 import { neumorphismTheme } from "#/styles/theme";
 import { createNeumorphismBoxShadow, defualtTransition } from "#/styles/utils";
 import { PostRenderMeatData } from "#/types/Post";
 import { dateUtils } from "#/utils/date";
 
-export function PostCard({ post }: { post: PostRenderMeatData }) {
+export function PostCard({
+  post,
+}: {
+  post: PostRenderMeatData & { views: number };
+}) {
   return (
     <Link href={`/posts/${post.path}`} passHref={true}>
       <Card role="link" css={{ cursor: "pointer" }} as="article">
@@ -31,7 +38,12 @@ export function PostCard({ post }: { post: PostRenderMeatData }) {
         >
           {post.description}
         </Pre>
-        <Badge size="small">{dateUtils.formatDateToShow(post.timestamp)}</Badge>
+        <Flex justify="space-between" align="center">
+          <Badge size="small">
+            {dateUtils.formatDateToShow(post.timestamp)}
+          </Badge>
+          <ViewCount count={post.views} />
+        </Flex>
       </Card>
     </Link>
   );

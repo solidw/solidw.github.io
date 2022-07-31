@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { css } from "@emotion/react";
 import { GetStaticPaths, GetStaticProps } from "next";
+import { useEffect } from "react";
 import { Block } from "#/components/Block";
 import { Container } from "#/components/Container";
 import { Hr } from "#/components/Hr";
@@ -10,6 +11,7 @@ import { Page } from "#/components/Page";
 import { SEO } from "#/components/SEO";
 import { Stack } from "#/components/Stack";
 import { Title } from "#/components/Title";
+import { useIncreasePostViews } from "#/hooks/useIncreasePostViews";
 import { PostRenderMeatData } from "#/types/Post";
 import { dateUtils } from "#/utils/date";
 import { postUtils } from "#/utils/post";
@@ -21,6 +23,12 @@ export default function PostPage({
   attributes: PostRenderMeatData;
   body: string;
 }) {
+  const { mutateAsync: increaseCount } = useIncreasePostViews(attributes.id);
+
+  useEffect(() => {
+    increaseCount();
+  }, []);
+
   return (
     <Page css={{ marginTop: 20 }}>
       <SEO

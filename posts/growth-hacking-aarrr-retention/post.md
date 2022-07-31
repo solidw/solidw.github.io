@@ -1,4 +1,5 @@
 ---
+id: 6
 title: "그로스 해킹 - AARRR - Retention"
 description: "그로스 해킹을 읽고 - 고객을 다시 방문하게 만들기"
 to: "제품을 잘 만들고 싶은 사람에게"

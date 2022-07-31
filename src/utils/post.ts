@@ -24,10 +24,9 @@ export const postUtils = {
   },
   safeParseAttributes: (
     postAttributes: PostAttributes,
-    fallbackPostAttributes: Omit<PostAttributes, "title">
+    fallbackPostAttributes: Partial<PostAttributes>
   ): Required<PostAttributes> => {
     const defaultAttributes = {
-      title: postAttributes.title,
       description: fallbackPostAttributes.description ?? "",
       draft: fallbackPostAttributes.draft ?? false,
       timestamp:
@@ -36,7 +35,7 @@ export const postUtils = {
     };
 
     return {
-      title: postAttributes.title,
+      ...postAttributes,
       description: postAttributes.description ?? defaultAttributes.description,
       draft: postAttributes.draft ?? defaultAttributes.draft,
       timestamp: postAttributes.timestamp ?? defaultAttributes.timestamp,

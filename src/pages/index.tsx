@@ -10,11 +10,14 @@ import { Page } from "#/components/Page";
 import { PostCard } from "#/components/PostCard";
 import { SEO } from "#/components/SEO";
 import { Title } from "#/components/Title";
+import { usePostsViews } from "#/hooks/usePostsViews";
 import { PostRenderMeatData } from "#/types/Post";
 import { dateUtils } from "#/utils/date";
 import { postUtils } from "#/utils/post";
 
 export default function IndexPage({ posts }: { posts: PostRenderMeatData[] }) {
+  const postViewsMap = usePostsViews();
+
   return (
     <Page title="포스트" css={{ marginTop: 20 }}>
       <SEO title="포스트" description="포스팅" canonical={`/`} />
@@ -33,7 +36,10 @@ export default function IndexPage({ posts }: { posts: PostRenderMeatData[] }) {
           >
             {posts.map((post, index) => (
               <Fragment key={post.path}>
-                <PostCard key={post.path} post={post} />
+                <PostCard
+                  key={post.path}
+                  post={{ ...post, views: postViewsMap[post.id]?.views ?? 0 }}
+                />
                 {index !== posts.length - 1 && <Hr />}
               </Fragment>
             ))}
@@ -53,9 +59,10 @@ export const getStaticProps: GetStaticProps<{
   const posts = folders.reduce<PostRenderMeatData[]>((posts, folder) => {
     const postPath = `${dir}/${folder}/post.md`;
     const content = fs.readFileSync(postPath, "utf8");
-    const birthDate = dateUtils.formatDate(fs.statSync(postPath).birthtime);
 
     const { attributes } = postUtils.parseFrontMatter(content);
+    const birthDate = dateUtils.formatDate(fs.statSync(postPath).birthtime);
+
     const safeAttributes = postUtils.safeParseAttributes(attributes, {
       timestamp: birthDate,
     });

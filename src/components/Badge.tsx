@@ -28,7 +28,6 @@ export function Badge({ size = "medium", children, ...props }: BadgeProps) {
         display: flex;
         justify-content: center;
         align-items: center;
-        align-self: flex-start;
         background-color: ${neumorphismTheme.primaryDarkShadow};
         border-radius: 16px;
         ${sizeToCss(size)}
