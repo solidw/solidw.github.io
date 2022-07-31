@@ -40,6 +40,6 @@ function getApiPrefixUrl() {
   const isLive = process.env.NODE_ENV === "production";
 
   return isLive
-    ? "http://localhost:8080"
-    : "https://solidw-github-io-server.herokuapp.com";
+    ? "https://solidw-github-io-server.herokuapp.com"
+    : "http://localhost:8080";
 }
