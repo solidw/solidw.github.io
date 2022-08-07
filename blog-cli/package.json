@@ -1,0 +1,11 @@
+{
+  "name": "blog-cli",
+  "packageManager": "yarn@3.2.1",
+  "bin": "bin/blog-cli",
+  "devDependencies": {
+    "@types/node": "^18.6.4",
+    "clipanion": "^3.2.0-rc.11",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  }
+}
