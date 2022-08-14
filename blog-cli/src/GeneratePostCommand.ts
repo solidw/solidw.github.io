@@ -16,7 +16,7 @@ export class GeneratePostMetadata extends Command {
   static paths = [[`g-post`]];
 
   async execute() {
-    const id = fs.readdirSync("posts").length - 1;
+    const id = fs.readdirSync("posts").length;
     const separator = "---";
     const title = this.title;
     const description = this.description;
