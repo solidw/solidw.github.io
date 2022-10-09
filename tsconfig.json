@@ -28,6 +28,6 @@
     "jsx": "preserve",
     "jsxImportSource": "@emotion/react"
   },
-  "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts", "next.config.js"],
+  "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts"],
   "exclude": ["**/*.spec.ts", "**/*.test.ts", ".next", ".out", "./scripts/*"]
 }
