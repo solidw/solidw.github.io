@@ -1180,15 +1180,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@toss/error-boundary@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@toss/error-boundary@npm:1.0.0"
-  peerDependencies:
-    react: ^16.8 || ^17 || ^18
-  checksum: 3c6d9ff713692bb5607b186222a37c4bd8c1083cebef8da5660a2c368052e0acc7eed4525b5f586a9cc5ef61fb332bd21403380c383c8bfd8c63a4fb88678ad5
-  languageName: node
-  linkType: hard
-
 "@tsconfig/node10@npm:^1.0.7":
   version: 1.0.9
   resolution: "@tsconfig/node10@npm:1.0.9"
@@ -1960,7 +1951,6 @@ __metadata:
     "@emotion/styled": ^11.9.3
     "@next/env": ^12.1.6
     "@tanstack/react-query": ^4.0.10
-    "@toss/error-boundary": ^1.0.0
     "@types/jest": ^28.1.3
     "@types/node": ^18.0.0
     "@types/react": ^18.0.14

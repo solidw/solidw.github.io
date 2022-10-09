@@ -38,7 +38,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/styled", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:11.10.0"],\
             ["@next/env", "npm:12.2.4"],\
             ["@tanstack/react-query", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:4.0.10"],\
-            ["@toss/error-boundary", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:1.0.0"],\
             ["@types/jest", "npm:28.1.6"],\
             ["@types/node", "npm:18.6.4"],\
             ["@types/react", "npm:18.0.15"],\
@@ -1806,28 +1805,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@toss/error-boundary", [\
-        ["npm:1.0.0", {\
-          "packageLocation": "./.yarn/cache/@toss-error-boundary-npm-1.0.0-048bf1f567-3c6d9ff713.zip/node_modules/@toss/error-boundary/",\
-          "packageDependencies": [\
-            ["@toss/error-boundary", "npm:1.0.0"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:1.0.0", {\
-          "packageLocation": "./.yarn/__virtual__/@toss-error-boundary-virtual-74a625daa1/0/cache/@toss-error-boundary-npm-1.0.0-048bf1f567-3c6d9ff713.zip/node_modules/@toss/error-boundary/",\
-          "packageDependencies": [\
-            ["@toss/error-boundary", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:1.0.0"],\
-            ["@types/react", "npm:18.0.15"],\
-            ["react", "npm:18.2.0"]\
-          ],\
-          "packagePeers": [\
-            "@types/react",\
-            "react"\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["@tsconfig/node10", [\
         ["npm:1.0.9", {\
           "packageLocation": "./.yarn/cache/@tsconfig-node10-npm-1.0.9-f2e2d20feb-a33ae4dc2a.zip/node_modules/@tsconfig/node10/",\
@@ -2840,7 +2817,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/styled", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:11.10.0"],\
             ["@next/env", "npm:12.2.4"],\
             ["@tanstack/react-query", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:4.0.10"],\
-            ["@toss/error-boundary", "virtual:c6dcce817fa225290e033ab3df9d032741dc228bb28c9cbb4719875ef6095c1c8f4a1ecb6d1cce6f1119ad7c9bb93c31bc307a4e235fab5627d039ca42e55b65#npm:1.0.0"],\
             ["@types/jest", "npm:28.1.6"],\
             ["@types/node", "npm:18.6.4"],\
             ["@types/react", "npm:18.0.15"],\
