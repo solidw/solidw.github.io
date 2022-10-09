@@ -56,15 +56,13 @@ export const getStaticProps: GetStaticProps<{
   const dir = path.join(process.cwd(), "posts");
   const postFiles = fs.readdirSync(dir);
 
-  const posts = postFiles.reduce<PostRenderMetadata[]>((posts, postFile) => {
+  const posts = postFiles.map((postFile) => {
     const postPath = `${dir}/${postFile}`;
     const content = fs.readFileSync(postPath, "utf-8");
-
     const { attributes } = postUtils.parseFrontMatter(content);
-    const birthDate = dateUtils.formatDate(fs.statSync(postPath).birthtime);
-
+    const timestamp = dateUtils.formatDate(fs.statSync(postPath).birthtime);
     const safeAttributes = postUtils.safeParseAttributes(attributes, {
-      timestamp: birthDate,
+      timestamp,
     });
 
     const post: PostRenderMetadata = {
@@ -72,8 +70,7 @@ export const getStaticProps: GetStaticProps<{
       path: postUtils.getFileNameBase(postFile),
     };
 
-    posts.push(post);
-    return posts;
+    return post;
   }, []);
 
   posts.sort(
