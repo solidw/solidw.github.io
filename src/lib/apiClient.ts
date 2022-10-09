@@ -1,6 +1,8 @@
 import ky from "ky";
 import type { Options } from "ky";
 
+const isLive = process.env.NODE_ENV === "production";
+
 export const apiClient = createHttpClient({
   prefixUrl: getApiPrefixUrl(),
   retry: 0,
@@ -16,12 +18,18 @@ export function createHttpClient(options: Options) {
       url: Parameters<typeof instance>[0],
       options: Omit<Options, "method"> = {}
     ) => {
-      const response = instance(url, {
-        method: method,
-        ...options,
-      });
+      try {
+        const response = await instance(url, {
+          method: method,
+          ...options,
+        });
 
-      return response.json<ResponseType>();
+        return response.json<ResponseType>();
+      } catch (e) {
+        if (isLive) {
+          throw e;
+        }
+      }
     };
   }
 
@@ -37,8 +45,6 @@ export function createHttpClient(options: Options) {
 }
 
 function getApiPrefixUrl() {
-  const isLive = process.env.NODE_ENV === "production";
-
   return isLive
     ? "https://solidw-github-io-server.herokuapp.com"
     : "http://localhost:8080";
