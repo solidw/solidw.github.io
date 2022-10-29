@@ -67,15 +67,14 @@ function ALink({
   ...props
 }: LinkProps & { className?: string; children: ReactNode }) {
   return (
-    <Link {...props}>
-      <a
-        className={className}
-        css={css`
-          ${normalizeLink}
-        `}
-      >
-        {children}
-      </a>
+    <Link
+      css={css`
+        ${normalizeLink}
+      `}
+      className={className}
+      {...props}
+    >
+      {children}
     </Link>
   );
 }

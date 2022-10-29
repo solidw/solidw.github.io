@@ -6,7 +6,11 @@ import { Flex } from "./Flex";
 import { Pre } from "./Pre";
 import { ViewCount } from "./ViewCount";
 import { neumorphismTheme } from "#/styles/theme";
-import { createNeumorphismBoxShadow, defualtTransition } from "#/styles/utils";
+import {
+  createNeumorphismBoxShadow,
+  defualtTransition,
+  normalizeLink,
+} from "#/styles/utils";
 import { PostRenderMetadata } from "#/types/Post";
 import { dateUtils } from "#/utils/date";
 
@@ -16,7 +20,7 @@ export function PostCard({
   post: PostRenderMetadata & { views: number };
 }) {
   return (
-    <Link href={`/posts/${post.path}`} passHref={true}>
+    <Link href={`/posts/${post.path}`} passHref={true} css={normalizeLink}>
       <Card role="link" css={{ cursor: "pointer" }} as="article">
         <h2>{post.title}</h2>
         <span
