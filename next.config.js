@@ -2,6 +2,9 @@
  * @type {import('next').NextConfig}
  */
 const config = {
+  compiler: {
+    emotion: true,
+  },
   experimental: {
     esmExternals: true,
   },
